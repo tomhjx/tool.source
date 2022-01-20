@@ -6,7 +6,8 @@ RUN mkdir $HOME/src && \
     go install --tags extended && \
     echo $PATH && \
     hugo version && \
-    which go hugo
+    which go hugo && \
+    hugo mod get -u github.com/alex-shpak/hugo-book
 
 FROM debian:bullseye-slim
 COPY --from=builder /go/bin/hugo /usr/local/bin/hugo
