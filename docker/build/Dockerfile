@@ -6,4 +6,7 @@ RUN apt-get update && \
     cd $HOME/src && \
     git clone --branch v0.92.0 https://github.com/gohugoio/hugo.git && \
     cd hugo && \
-    go install --tags extended
+    go install --tags extended && \
+    echo $GOPATH && \
+    echo $GOROOT && \
+    ls -ahl $GOROOT/bin
