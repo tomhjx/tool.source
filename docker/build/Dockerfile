@@ -6,11 +6,11 @@ RUN mkdir $HOME/src && \
     go install --tags extended && \
     echo $PATH && \
     hugo version && \
-    which go hugo
+    which go hugo && \
+    git clone --branch v9 https://github.com/alex-shpak/hugo-book /var/hugo/themes/hugo-book
 
 FROM debian:bullseye-slim
 ENV SITE_DIR="/var/www"
 COPY --from=builder /go/bin/hugo /usr/local/bin/hugo
-RUN hugo new site $SITE_DIR && \
-    cd $SITE_DIR && \
-    git clone --branch v9 https://github.com/alex-shpak/hugo-book themes/hugo-book
+RUN hugo new site $SITE_DIR
+COPY --from=builder /var/hugo/themes/hugo-book $SITE_DIR/themes/hugo-book
