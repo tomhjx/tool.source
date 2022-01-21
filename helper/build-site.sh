@@ -1,2 +1,2 @@
 #!/bin/bash
-hugo server --minify
+hugo server --minify --config config.yaml
