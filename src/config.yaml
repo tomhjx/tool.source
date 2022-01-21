@@ -1,6 +1,8 @@
 baseURL: 'https://www.toolkit.org/'
 languageCode: 'en-us'
 title: 'Tool Kit'
+theme: hugo-book
+
 menu: 
   main:
   - identifier: formatter
@@ -8,7 +10,7 @@ menu:
     title: formatter section
     url: /formatter/
     weight: -110
-    
+
 params:
   # (Optional, default light) Sets color theme: light, dark or auto.
   # Theme 'auto' switches between dark and light modes based on browser/os preferences
