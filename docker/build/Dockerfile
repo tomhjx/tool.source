@@ -11,6 +11,7 @@ RUN mkdir $HOME/src && \
 
 FROM debian:bullseye-slim
 ENV SITE_DIR="/var/www"
+WORKDIR $SITE_DIR
 COPY --from=builder /go/bin/hugo /usr/local/bin/hugo
 RUN hugo new site $SITE_DIR
 COPY --from=builder /var/hugo/themes/hugo-book $SITE_DIR/themes/hugo-book
