@@ -39,9 +39,9 @@ jobs:
       - name: Build
         run: |
           docker run \
-          -v ./public:/var/www/public \
-          -v ./src/config.yaml:/var/www/config.yaml \
-          -v ./src/archetypes:/var/www/archetypes \
+          -v ${{ github.workspace }}/public:/var/www/public \
+          -v ${{ github.workspace }}/src/config.yaml:/var/www/config.yaml \
+          -v ${{ github.workspace }}/src/archetypes:/var/www/archetypes \
           tomhjx/hugo:0.92.0 hugo --minify -t hugo-book
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
