@@ -10,6 +10,12 @@ menu:
     title: formatter section
     url: /formatter/
     weight: -110
+  - name: getting started
+    post: <span class='alert'>New!</span>
+    pre: <i class='fa fa-road'></i>
+    url: /getting-started/
+    weight: -100
+
 
 params:
   # (Optional, default light) Sets color theme: light, dark or auto.
