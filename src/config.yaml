@@ -3,8 +3,11 @@ languageCode: 'en-us'
 title: 'Tool Kit'
 theme: hugo-book
 
-menu: main
-
+menu: 
+  docs:
+    title: "how to use menus in templates"
+    parent: "templates"
+    weight: 130
 
 params:
   # (Optional, default light) Sets color theme: light, dark or auto.
