@@ -2,8 +2,9 @@ baseURL: 'https://www.toolkit.org/'
 languageCode: 'en-us'
 title: 'Tool Kit'
 menu: 
-- identifier: formatter
-  name: formatter
-  title: formatter section
-  url: /formatter/
-  weight: -110
+  main:
+  - identifier: formatter
+    name: formatter
+    title: formatter section
+    url: /formatter/
+    weight: -110
