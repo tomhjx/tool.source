@@ -3,7 +3,7 @@ languageCode: 'en-us'
 title: 'Tool Kit'
 theme: hugo-book
 
-sectionPagesMenu: main
+# sectionPagesMenu: main
 
 # menu: 
 #   docs:
