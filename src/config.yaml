@@ -11,12 +11,12 @@ menu:
     name: formatter
     title: formatter section
     url: /formatter/
-    weight: -110
+    weight: 10
   - name: getting started
     post: <span class='alert'>New!</span>
     pre: <i class='fa fa-road'></i>
     url: /getting-started/
-    weight: -100
+    weight: 20
 
 
 params:
