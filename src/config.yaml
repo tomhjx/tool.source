@@ -3,6 +3,8 @@ languageCode: 'en-us'
 title: 'Tool Kit'
 theme: hugo-book
 
+sectionPagesMenu: main
+
 menu: 
   main:
   - identifier: formatter
