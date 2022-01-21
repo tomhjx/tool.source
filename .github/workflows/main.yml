@@ -30,3 +30,25 @@ jobs:
           docker build ${{ github.workspace }}/docker/build -t $DOCKER_RELEASE_TAG
           docker push $DOCKER_RELEASE_TAG
 
+  build-site:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      - name: Build
+        run: |
+          docker run \
+          -v ./public:/var/www/public \
+          -v ./src/config.yaml:/var/www/config.yaml \
+          -v ./src/archetypes:/var/www/archetypes \
+          tomhjx/hugo:0.92.0 hugo --minify -t hugo-book
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          deploy_key: ${{ secrets.DEPLOY_KEY }}
+          external_repository: tomhjx/www.toolkit
+          publish_branch: main
+          publish_dir: ./public
+
+

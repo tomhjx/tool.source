@@ -4,4 +4,4 @@ services:
       image: tomhjx/hugo:0.92.0
       working_dir: /var/www
       volumes:
-        - ./src:/var/www
+        - ./src/archetypes:/var/www/archetypes
