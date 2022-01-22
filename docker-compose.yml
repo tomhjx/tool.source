@@ -1,7 +1,7 @@
 version: '3.5'
 services:
   build-toolkit:
-      image: tomhjx/hugo:0.92.0
+      image: tomhjx/hugo:0.92.0-docsy
       working_dir: /var/www
       volumes:
         - ./src/archetypes:/var/www/archetypes
