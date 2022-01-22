@@ -3,7 +3,8 @@
 <iframe id="google_translate" height="1200" width="600"  align="middle" border="0">
 
 <script>
-  document.getElementById("google_translate").src="https://translate.google.com/translate?hl=bg&ie=UTF-8&u="+window.location.href+"&sl=de&tl=bg";
+  var src = "https://translate.google.com/translate?hl=bg&ie=UTF-8&u="+window.location.href+"&sl=de&tl=bg";
+  document.getElementById("google_translate").src=src;
 </script>
 
 {{ end }}
