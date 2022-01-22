@@ -2,7 +2,7 @@
 title: "Translate"
 date: 2022-01-22T00:26:41Z
 draft: false
-type: docs
 layout: translate
 ---
 
+Translate
