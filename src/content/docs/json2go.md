@@ -1,8 +1,8 @@
 ---
-title: "Translate"
+title: "JSON to GO"
 date: 2022-01-22T00:26:41Z
 draft: false
-layout: translate
+layout: json2go
 ---
 
 Translate
