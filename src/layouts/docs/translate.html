@@ -1,11 +1,26 @@
 {{ define "main" }}
 
-<iframe id="google_translate" height="1200" width="600" src="https://translate.google.com/?sl=en&tl=zh-CN&op=translate&hl=zh-CN" align="middle" border="0"></iframe>
+<script src="https://mholt.github.io/json-to-go/resources/js/jquery.min.js"></script>
+<script src="https://mholt.github.io/json-to-go/resources/js/json-to-go.js"></script>
+<script src="https://mholt.github.io/json-to-go/resources/js/common.js"></script>
+<script src="https://mholt.github.io/json-to-go/resources/js/gofmt.js" async></script>
 
-<!-- <script>
-  var src = "https://translate.google.com/translate?hl=bg&ie=UTF-8&u="+encodeURIComponent(window.location.href)+"&sl=de&tl=bg";
-  document.getElementById("google_translate").src=src;
-  console.log(window.location.href)
-</script> -->
+<table>
+  <tr>
+    <th style="width: 45%;">JSON</th>
+    <th style="width: 10%; font-size: 22px;">&#8594;</th>
+    <th style="width: 45%;">Go <label><input type="checkbox" id="inline" checked>Inline type definitions</label> <span class="copy" id="copy-btn">Copy to clipboard</span></th>
+  </tr>
+</table>
+<table>
+  <tr>
+    <td style="width: 50%;">
+      <div id="input" contenteditable></div>
+    </td>
+    <td style="width: 50%;">
+      <div id="output"></div>
+    </td>
+  </tr>
+</table>
 
 {{ end }}
