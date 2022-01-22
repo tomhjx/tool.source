@@ -6,3 +6,5 @@ type: page
 ---
 
 this is a Translate page.
+
+{{ partial "custom/google_translate.html" . }}
