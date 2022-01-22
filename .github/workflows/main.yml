@@ -26,7 +26,7 @@ jobs:
           password: ${{ secrets.DOCKERHUB_PASSWORD }}
       - name: Build and Push
         run: |
-          DOCKER_RELEASE_TAG="tomhjx/hugo:0.92.0"
+          DOCKER_RELEASE_TAG="tomhjx/hugo:0.92.0-docsy"
           docker build ${{ github.workspace }}/docker/build -t $DOCKER_RELEASE_TAG
           docker push $DOCKER_RELEASE_TAG
 
@@ -46,7 +46,7 @@ jobs:
           -v ${{ github.workspace }}/src/content:/var/www/content \
           -v ${{ github.workspace }}/src/static:/var/www/static \
           -v ${{ github.workspace }}/src/layouts:/var/www/layouts \
-          tomhjx/hugo:0.92.0 hugo --minify --config config.yaml
+          tomhjx/hugo:0.92.0-docsy hugo --minify --config config.yaml
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
