@@ -5,6 +5,10 @@ theme: docsy
 
 googleAnalytics: G-3TEJLB7B10
 
-# menu: 
-# - docs
-# - posts
+menu: 
+- main
+
+
+params:
+  copyright: "tomhjx"
+  offlineSearch: true
