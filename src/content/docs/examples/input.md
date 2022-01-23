@@ -1,4 +1,4 @@
 ---
 title: "Input"
-layout: input
+layout: json2go
 ---
