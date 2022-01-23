@@ -1,4 +1,4 @@
 ---
 title: "Formatter"
-weight: 3
+weight: 2
 ---
