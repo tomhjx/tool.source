@@ -5,6 +5,6 @@ theme: docsy
 
 googleAnalytics: G-3TEJLB7B10
 
-menu: 
-- docs
-- posts
+# menu: 
+# - docs
+# - posts
