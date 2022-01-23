@@ -1,12 +1,12 @@
 baseURL: '/'
 languageCode: 'en-us'
-title: 'Tool Kit'
+title: "Tom's Tool Kit"
 theme: docsy
 
 googleAnalytics: G-3TEJLB7B10
 
-menu: 
-- main
+# menu: 
+# - main
 
 
 params:
