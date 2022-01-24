@@ -2,9 +2,7 @@
 {{ $blockID := printf "editorcontainer%d" .Ordinal }}
 {{ $langType := .Get "type" | default "typescript" }}
 
-<h1>{{ $blockID }}</h1>
-
-<div id="editorcontainer" class="td-box--height-full border w-100" ></div>
+<div id="{{ $blockID  }}"" class="td-box--height-full border w-100" ></div>
 
 <link data-name="vs/editor/editor.main" rel="stylesheet" href="https://microsoft.github.io/monaco-editor/node_modules/monaco-editor/min/vs/editor/editor.main.css" />
 <script>
@@ -16,7 +14,7 @@
 
 <script>
     $(function(){
-        var editor = monaco.editor.create(document.getElementById("editorcontainer"), {
+        var editor = monaco.editor.create(document.getElementById("{{ $blockID  }}"), {
             value: ['function x() {', '\tconsole.log("Hello world!");', '}'].join('\n'),
             language: '{{ $langType }}'
         });
