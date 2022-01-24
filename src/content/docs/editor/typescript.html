@@ -5,9 +5,7 @@ title = "TypeScript Editor"
 Rich TypeScript IntelliSense, Validation
 
 
-{{< blocks/section height="full" color="white" >}}
-
-<div id="container" style="height: auto;" ></div>
+{{< blocks/section height="full" color="white" type="_editor" >}}
 
 
 {{< /blocks/section >}}
@@ -20,7 +18,7 @@ Rich TypeScript IntelliSense, Validation
 
 <script>
     $(function(){
-        var editor = monaco.editor.create(document.getElementsByClassName('_editor'), {
+        var editor = monaco.editor.create(document.getElementsByClassName("_editor")[0], {
             value: ['function x() {', '\tconsole.log("Hello world!");', '}'].join('\n'),
             language: 'typescript'
         });
