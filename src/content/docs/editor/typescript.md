@@ -1,7 +1,7 @@
 ---
 title: "TypeScript"
 description: >
-    Rich TypeScript IntelliSense, Validation.
+    Rich IntelliSense, Validation for TypeScript.
 ---
 
 {{<  t/codeeditor type="typescript" >}}

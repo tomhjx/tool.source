@@ -1,7 +1,7 @@
 ---
 title: "LESS"
 description: >
-    Rich LESS IntelliSense, Validation.
+    Rich IntelliSense, Validation for LESS.
 ---
 
 {{<  t/codeeditor type="less" >}}

@@ -1,7 +1,7 @@
 ---
 title: "SCSS"
 description: >
-    Rich SCSS IntelliSense, Validation.
+    Rich IntelliSense, Validation for SCSS.
 ---
 
 {{<  t/codeeditor type="scss" >}}

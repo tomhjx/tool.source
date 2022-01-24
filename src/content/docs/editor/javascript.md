@@ -1,7 +1,7 @@
 ---
 title: "JavaScript"
 description: >
-    Rich JavaScript IntelliSense, Validation.
+    Rich IntelliSense, Validation for JavaScript.
 ---
 
 {{<  t/codeeditor type="javascript" >}}

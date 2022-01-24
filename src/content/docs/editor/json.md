@@ -1,7 +1,7 @@
 ---
 title: "JSON"
 description: >
-    Rich JSON IntelliSense, Validation.
+    Rich IntelliSense, Validation for JSON.
 ---
 
 {{<  t/codeeditor type="json" >}}

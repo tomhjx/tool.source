@@ -1,7 +1,7 @@
 ---
 title: "CSS"
 description: >
-    Rich CSS IntelliSense, Validation.
+    Rich IntelliSense, Validation for CSS.
 ---
 
 {{<  t/codeeditor type="css" >}}

@@ -1,7 +1,7 @@
 ---
 title: "HTML"
 description: >
-    Rich HTML IntelliSense, Validation.
+    Rich IntelliSense, Validation for HTML.
 ---
 
 {{<  t/codeeditor type="html" >}}
