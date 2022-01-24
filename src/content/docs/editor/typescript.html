@@ -2,9 +2,15 @@
 title = "TypeScript Editor"
 +++
 
-{{% blocks/lead color="dark" %}}
+{{% blocks/lead %}}
 Rich TypeScript IntelliSense, Validation
 {{% /blocks/lead %}}
+
+{{< blocks/section >}}
+
+<div id="container" style="width: 800px; height: 600px; border: 1px solid grey"></div>
+
+{{< /blocks/section >}}
 
 <link data-name="vs/editor/editor.main" rel="stylesheet" href="https://microsoft.github.io/monaco-editor/node_modules/monaco-editor/min/vs/editor/editor.main.css" />
 
@@ -12,7 +18,8 @@ Rich TypeScript IntelliSense, Validation
 <script src="https://microsoft.github.io/monaco-editor/node_modules/monaco-editor/min/vs/editor/editor.main.nls.js"></script>
 <script src="https://microsoft.github.io/monaco-editor/node_modules/monaco-editor/min/vs/editor/editor.main.js"></script>
 
-<div id="container" style="width: 800px; height: 600px; border: 1px solid grey"></div>
+
+
 
 <script>
     var editor = monaco.editor.create(document.getElementById('container'), {
