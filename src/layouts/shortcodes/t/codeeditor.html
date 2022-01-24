@@ -1,11 +1,8 @@
----
-title: "TypeScript Editor"
----
+{{ $_hugo_config := `{ "version": 1 }` }}
+{{ $blockID := printf "editorcontainer%d" .Ordinal }}
+{{ $langType := .Get "type" | default "typescript" }}
 
-## Rich TypeScript IntelliSense, Validation
-
-
-{{<
+<h1>{{ $blockID }}</h1>
 
 <div id="editorcontainer" class="td-box--height-full border w-100" ></div>
 
@@ -21,9 +18,7 @@ title: "TypeScript Editor"
     $(function(){
         var editor = monaco.editor.create(document.getElementById("editorcontainer"), {
             value: ['function x() {', '\tconsole.log("Hello world!");', '}'].join('\n'),
-            language: 'typescript'
+            language: '{{ $langType }}'
         });
     })
 </script>
-
->}}
