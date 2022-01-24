@@ -3,7 +3,7 @@ title: "TypeScript Editor"
 ---
 
 
-Rich TypeScript IntelliSense, Validation
+Rich `TypeScript` IntelliSense, Validation
 
 
 {{<  t/codeeditor type="typescript" >}}
