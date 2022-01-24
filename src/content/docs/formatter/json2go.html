@@ -3,24 +3,29 @@ title = "JSON to GO"
 +++
 <link rel="stylesheet" href="/css/content/docs/formatter/json2go.css">
 
+<script src="/js/highlight.min.js"></script>
+<script src="/js/json-to-go.js"></script>
+<script src="/js/common.js"></script>
+<script src="/js/gofmt.js" async></script>
+
 <div class="container">
-<div class="row">
-    <div class="col">
-        <div id="input" contenteditable></div>
+    <div class="row">
+        Go <label><input type="checkbox" id="inline" checked>Inline type definitions</label> <span class="copy" id="copy-btn">Copy to clipboard</span>
     </div>
-    <div class="col">
-      <div id="output"></div>
+    <div class="row">
+        <div class="col">
+            <div id="input" contenteditable></div>
+        </div>
+        <div class="col">
+        <div id="output"></div>
+        </div>
     </div>
-  </div>
 </div>
 
 <!-- 
 
 <script src="/js/jquery.min.js"></script>
-<script src="/js/highlight.min.js"></script>
-<script src="/js/json-to-go.js"></script>
-<script src="/js/common.js"></script>
-<script src="/js/gofmt.js" async></script>
+
 <link rel="stylesheet" href="https://mholt.github.io/json-to-go/resources/css/tomorrow.highlight.css">
 <link rel="stylesheet" href="https://mholt.github.io/json-to-go/resources/css/common.css">
 
