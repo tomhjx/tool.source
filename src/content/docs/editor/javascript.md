@@ -1,5 +1,5 @@
 ---
-title: "JavaScript Editor"
+title: "JavaScript"
 ---
 
 
