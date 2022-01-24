@@ -1,7 +1,9 @@
 ---
 title: "JavaScript"
 description: >
-    Rich JavaScript IntelliSense, Validation. To learn more about [JavaScript](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript)
+    Rich JavaScript IntelliSense, Validation.
 ---
 
 {{<  t/codeeditor type="javascript" >}}
+
+To learn more about [JavaScript](https://www.javascript.com/)
