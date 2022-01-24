@@ -1,0 +1,18 @@
++++
+title = "TypeScript Editor"
++++
+
+<link data-name="vs/editor/editor.main" rel="stylesheet" href="https://microsoft.github.io/monaco-editor/node_modules/monaco-editor/min/vs/editor/editor.main.css" />
+
+<script src="https://microsoft.github.io/monaco-editor/node_modules/monaco-editor/min/vs/loader.js"></script>
+<script src="https://microsoft.github.io/monaco-editor/node_modules/monaco-editor/min/vs/editor/editor.main.nls.js"></script>
+<script src="https://microsoft.github.io/monaco-editor/node_modules/monaco-editor/min/vs/editor/editor.main.js"></script>
+
+<div id="container" style="width: 800px; height: 600px; border: 1px solid grey"></div>
+
+<script>
+    var editor = monaco.editor.create(document.getElementById('container'), {
+        value: ['function x() {', '\tconsole.log("Hello world!");', '}'].join('\n'),
+        language: 'typescript'
+    });
+</script>
