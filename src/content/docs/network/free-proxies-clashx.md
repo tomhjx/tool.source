@@ -1,0 +1,1095 @@
+---
+title: "Free Proxies used ClashX Configuration"
+description: >
+    Free Proxies of Vmess/Trojan/SSR/SS Protocol, used ClashX Configuration
+---
+
+```yaml
+
+port: 7890
+socks-port: 7891
+allow-lan: false
+mode: rule
+log-level: info
+external-controller: 127.0.0.1:9090
+proxies:
+- name: US-38.68.134.191-079
+  server: 38.68.134.191
+  port: 443
+  type: ss
+  cipher: aes-256-gcm
+  password: pKEW8JPByTVTLtM
+- name: CH-37.120.137.82-048
+  server: 37.120.137.82
+  port: 8388
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: EGTHtnGhcnggx5yBYSqS
+- name: CA-198.57.27.184-299
+  server: 198.57.27.184
+  port: 3389
+  type: ss
+  cipher: aes-256-gcm
+  password: Y6R9pAtvxxzmGC
+- name: CA-134.195.196.200-003
+  server: 134.195.196.200
+  port: 2376
+  type: ss
+  cipher: aes-256-gcm
+  password: faBAoD54k87UJG7
+- name: FR-149.202.82.172-114
+  server: 149.202.82.172
+  port: 5003
+  type: ss
+  cipher: aes-256-gcm
+  password: g5MeD6Ft3CWlJId
+- name: US-167.88.62.34-016
+  server: 167.88.62.34
+  port: 5004
+  type: ss
+  cipher: aes-256-gcm
+  password: g5MeD6Ft3CWlJId
+- name: CA-134.195.196.227-004
+  server: 134.195.196.227
+  port: 8091
+  type: ss
+  cipher: aes-256-gcm
+  password: PCnnH6SQSnfoS27
+- name: CA-134.195.196.193-002
+  server: 134.195.196.193
+  port: 8080
+  type: ss
+  cipher: aes-256-gcm
+  password: KixLvKzwjekG00rm
+- name: FR-149.202.82.172-471
+  server: 149.202.82.172
+  port: 5001
+  type: ss
+  cipher: aes-256-gcm
+  password: Y6R9pAtvxxzmGC
+- name: KR-141.164.38.135-425
+  server: 141.164.38.135
+  port: 7002
+  type: ss
+  cipher: aes-256-gcm
+  password: RexnBgU7EV5ADxG
+- name: CA-198.57.27.184-011
+  server: 198.57.27.184
+  port: 8080
+  type: ss
+  cipher: aes-256-gcm
+  password: KixLvKzwjekG00rm
+- name: GB-172.99.190.188-292
+  server: 172.99.190.188
+  port: 2376
+  type: ss
+  cipher: aes-256-gcm
+  password: faBAoD54k87UJG7
+- name: US-38.121.43.71-049
+  server: 38.121.43.71
+  port: 7307
+  type: ss
+  cipher: aes-256-gcm
+  password: FoOiGlkAA9yPEGP
+- name: CA-134.195.196.227-005
+  server: 134.195.196.227
+  port: 8009
+  type: ss
+  cipher: aes-256-gcm
+  password: XKFKl2rULjIp74
+- name: GB-172.99.190.205-100
+  server: 172.99.190.205
+  port: 2375
+  type: ss
+  cipher: aes-256-gcm
+  password: faBAoD54k87UJG7
+- name: US-38.68.134.191-529
+  server: 38.68.134.191
+  port: 7306
+  type: ss
+  cipher: aes-256-gcm
+  password: FoOiGlkAA9yPEGP
+- name: CA-134.195.196.147-013
+  server: 134.195.196.147
+  port: 8090
+  type: ss
+  cipher: aes-256-gcm
+  password: PCnnH6SQSnfoS27
+- name: US-38.121.43.71-507
+  server: 38.121.43.71
+  port: 5003
+  type: ss
+  cipher: aes-256-gcm
+  password: g5MeD6Ft3CWlJId
+- name: CA-198.57.27.184-010
+  server: 198.57.27.184
+  port: 5004
+  type: ss
+  cipher: aes-256-gcm
+  password: g5MeD6Ft3CWlJId
+- name: FR-145.239.1.100-037
+  server: 145.239.1.100
+  port: 8090
+  type: ss
+  cipher: aes-256-gcm
+  password: PCnnH6SQSnfoS27
+- name: GB-172.99.190.109-040
+  server: 172.99.190.109
+  port: 7306
+  type: ss
+  cipher: aes-256-gcm
+  password: FoOiGlkAA9yPEGP
+- name: DE-172.105.244.165-307
+  server: 172.105.244.165
+  port: 8090
+  type: ss
+  cipher: aes-256-gcm
+  password: PCnnH6SQSnfoS27
+- name: BV-46.29.219.246-084
+  server: 46.29.219.246
+  port: 5004
+  type: ss
+  cipher: aes-256-gcm
+  password: g5MeD6Ft3CWlJId
+- name: US-38.75.136.45-085
+  server: 38.75.136.45
+  port: 3389
+  type: ss
+  cipher: aes-256-gcm
+  password: Y6R9pAtvxxzmGC
+- name: CA-198.57.27.172-469
+  server: 198.57.27.172
+  port: 9102
+  type: ss
+  cipher: aes-256-gcm
+  password: e4FCWrgpkji3QY
+- name: US-38.68.134.191-505
+  server: 38.68.134.191
+  port: 5003
+  type: ss
+  cipher: aes-256-gcm
+  password: g5MeD6Ft3CWlJId
+- name: US-38.68.134.191-027
+  server: 38.68.134.191
+  port: 8080
+  type: ss
+  cipher: aes-256-gcm
+  password: KixLvKzwjekG00rm
+- name: CA-134.195.196.193-035
+  server: 134.195.196.193
+  port: 8090
+  type: ss
+  cipher: aes-256-gcm
+  password: PCnnH6SQSnfoS27
+- name: US-38.75.136.45-427
+  server: 38.75.136.45
+  port: 8090
+  type: ss
+  cipher: aes-256-gcm
+  password: PCnnH6SQSnfoS27
+- name: CA-134.195.196.51-445
+  server: 134.195.196.51
+  port: 6679
+  type: ss
+  cipher: aes-256-gcm
+  password: TEzjfAYq2IjtuoS
+- name: US-167.88.63.61-018
+  server: 167.88.63.61
+  port: 8008
+  type: ss
+  cipher: aes-256-gcm
+  password: XKFKl2rULjIp74
+- name: US-38.75.136.127-502
+  server: 38.75.136.127
+  port: 6697
+  type: ss
+  cipher: aes-256-gcm
+  password: TEzjfAYq2IjtuoS
+- name: CA-134.195.196.128-443
+  server: 134.195.196.128
+  port: 9102
+  type: ss
+  cipher: aes-256-gcm
+  password: e4FCWrgpkji3QY
+- name: FR-51.255.87.96-470
+  server: 51.255.87.96
+  port: 8009
+  type: ss
+  cipher: aes-256-gcm
+  password: XKFKl2rULjIp74
+- name: US-167.88.63.74-535
+  server: 167.88.63.74
+  port: 8091
+  type: ss
+  cipher: aes-256-gcm
+  password: PCnnH6SQSnfoS27
+- name: US-38.68.134.23-088
+  server: 38.68.134.23
+  port: 443
+  type: ss
+  cipher: aes-256-gcm
+  password: pKEW8JPByTVTLtM
+- name: IN-192.46.209.227-310
+  server: 192.46.209.227
+  port: 8008
+  type: ss
+  cipher: aes-256-gcm
+  password: XKFKl2rULjIp74
+- name: US-38.75.136.45-501
+  server: 38.75.136.45
+  port: 2376
+  type: ss
+  cipher: aes-256-gcm
+  password: faBAoD54k87UJG7
+- name: CA-134.195.196.193-460
+  server: 134.195.196.193
+  port: 5004
+  type: ss
+  cipher: aes-256-gcm
+  password: g5MeD6Ft3CWlJId
+- name: BV-46.29.219.246-308
+  server: 46.29.219.246
+  port: 2376
+  type: ss
+  cipher: aes-256-gcm
+  password: faBAoD54k87UJG7
+- name: CA-134.195.196.81-036
+  server: 134.195.196.81
+  port: 8091
+  type: ss
+  cipher: aes-256-gcm
+  password: PCnnH6SQSnfoS27
+- name: CA-198.57.27.152-444
+  server: 198.57.27.152
+  port: 5003
+  type: ss
+  cipher: aes-256-gcm
+  password: g5MeD6Ft3CWlJId
+- name: CA-134.195.196.71-455
+  server: 134.195.196.71
+  port: 5004
+  type: ss
+  cipher: aes-256-gcm
+  password: g5MeD6Ft3CWlJId
+- name: US-167.88.63.61-536
+  server: 167.88.63.61
+  port: 8882
+  type: ss
+  cipher: aes-256-gcm
+  password: kDWvXYZoTBcGkC4
+- name: US-167.88.63.74-452
+  server: 167.88.63.74
+  port: 8080
+  type: ss
+  cipher: aes-256-gcm
+  password: KixLvKzwjekG00rm
+- name: FR-95.142.175.14-050
+  server: 95.142.175.14
+  port: 443
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: tkAx1ehPPkMN
+- name: CA-134.195.196.144-463
+  server: 134.195.196.144
+  port: 6697
+  type: ss
+  cipher: aes-256-gcm
+  password: TEzjfAYq2IjtuoS
+- name: GB-172.99.190.205-473
+  server: 172.99.190.205
+  port: 8091
+  type: ss
+  cipher: aes-256-gcm
+  password: PCnnH6SQSnfoS27
+- name: US-167.88.63.74-020
+  server: 167.88.63.74
+  port: 8090
+  type: ss
+  cipher: aes-256-gcm
+  password: PCnnH6SQSnfoS27
+- name: CA-134.195.196.147-462
+  server: 134.195.196.147
+  port: 7001
+  type: ss
+  cipher: aes-256-gcm
+  password: RexnBgU7EV5ADxG
+- name: CA-198.57.27.152-008
+  server: 198.57.27.152
+  port: 5004
+  type: ss
+  cipher: aes-256-gcm
+  password: g5MeD6Ft3CWlJId
+- name: US-167.88.63.74-019
+  server: 167.88.63.74
+  port: 2375
+  type: ss
+  cipher: aes-256-gcm
+  password: faBAoD54k87UJG7
+- name: GB-172.99.190.39-022
+  server: 172.99.190.39
+  port: 5003
+  type: ss
+  cipher: aes-256-gcm
+  password: g5MeD6Ft3CWlJId
+- name: GB-172.99.190.149-474
+  server: 172.99.190.149
+  port: 2375
+  type: ss
+  cipher: aes-256-gcm
+  password: faBAoD54k87UJG7
+- name: DE-139.162.132.116-479
+  server: 139.162.132.116
+  port: 6679
+  type: ss
+  cipher: aes-256-gcm
+  password: TEzjfAYq2IjtuoS
+- name: US-38.107.226.48-025
+  server: 38.107.226.48
+  port: 8090
+  type: ss
+  cipher: aes-256-gcm
+  password: PCnnH6SQSnfoS27
+- name: US-167.88.63.61-446
+  server: 167.88.63.61
+  port: 8118
+  type: ss
+  cipher: aes-256-gcm
+  password: cdBIDV42DCwnfIN
+- name: CA-134.195.196.43-457
+  server: 134.195.196.43
+  port: 5001
+  type: ss
+  cipher: aes-256-gcm
+  password: Y6R9pAtvxxzmGC
+- name: US-38.107.226.48-1133
+  server: 38.107.226.48
+  port: 5004
+  type: ss
+  cipher: aes-256-gcm
+  password: g5MeD6Ft3CWlJId
+- name: GB-172.99.190.149-483
+  server: 172.99.190.149
+  port: 8080
+  type: ss
+  cipher: aes-256-gcm
+  password: KixLvKzwjekG00rm
+- name: GB-172.99.190.149-021
+  server: 172.99.190.149
+  port: 8090
+  type: ss
+  cipher: aes-256-gcm
+  password: PCnnH6SQSnfoS27
+- name: GB-172.99.190.84-311
+  server: 172.99.190.84
+  port: 8090
+  type: ss
+  cipher: aes-256-gcm
+  password: PCnnH6SQSnfoS27
+- name: CA-134.195.196.200-459
+  server: 134.195.196.200
+  port: 5003
+  type: ss
+  cipher: aes-256-gcm
+  password: g5MeD6Ft3CWlJId
+- name: US-38.68.135.112-503
+  server: 38.68.135.112
+  port: 5003
+  type: ss
+  cipher: aes-256-gcm
+  password: g5MeD6Ft3CWlJId
+- name: CA-134.195.196.71-454
+  server: 134.195.196.71
+  port: 9101
+  type: ss
+  cipher: aes-256-gcm
+  password: e4FCWrgpkji3QY
+- name: US-38.107.226.158-532
+  server: 38.107.226.158
+  port: 2375
+  type: ss
+  cipher: aes-256-gcm
+  password: faBAoD54k87UJG7
+- name: CA-198.57.27.152-454
+  server: 198.57.27.152
+  port: 2375
+  type: ss
+  cipher: aes-256-gcm
+  password: faBAoD54k87UJG7
+- name: CA-134.195.196.71-471
+  server: 134.195.196.71
+  port: 8009
+  type: ss
+  cipher: aes-256-gcm
+  password: XKFKl2rULjIp74
+- name: CA-134.195.196.71-007
+  server: 134.195.196.71
+  port: 5601
+  type: ss
+  cipher: aes-256-gcm
+  password: Y6R9pAtvxxzmGC
+- name: FR-141.95.0.26-111
+  server: 141.95.0.26
+  port: 826
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: sF43Xt2gONqcgFX563
+- name: US-38.107.226.48-312
+  server: 38.107.226.48
+  port: 8080
+  type: ss
+  cipher: aes-256-gcm
+  password: KixLvKzwjekG00rm
+- name: US-216.127.172.25-425
+  server: xioix.gq
+  port: 443
+  type: trojan
+  password: 9b7195ba-f029-4d7d-a728-ece6e0fdc363
+  skip-cert-verify: false
+- name: GB-185.212.62.19-450
+  server: 185.212.62.19
+  port: 443
+  type: trojan
+  password: sxkKUbBydK
+  skip-cert-verify: false
+- name: US-89.208.252.110-499
+  server: 89.208.252.110
+  port: 19698
+  type: trojan
+  password: 1w5vcK1KiD
+  skip-cert-verify: false
+- name: HK-218.253.159.69-475
+  server: ssl.tcpbbr.net
+  port: 443
+  type: trojan
+  password: 5c7b33c6-6d83-11eb-b77b-f23c913c8d2b
+  skip-cert-verify: false
+proxy-groups:
+- name: 节点选择
+  type: select
+  proxies:
+  - 自动选择
+  - 手动选择
+  - 国家选择
+  - 负载均衡
+  - 失败切换
+  - DIRECT
+- name: 自动选择
+  type: url-test
+  url: http://www.gstatic.com/generate_204
+  interval: 300
+  tolerance: 50
+  proxies:
+  - US-38.68.134.191-079
+  - CH-37.120.137.82-048
+  - CA-198.57.27.184-299
+  - CA-134.195.196.200-003
+  - FR-149.202.82.172-114
+  - US-167.88.62.34-016
+  - CA-134.195.196.227-004
+  - CA-134.195.196.193-002
+  - FR-149.202.82.172-471
+  - KR-141.164.38.135-425
+  - CA-198.57.27.184-011
+  - GB-172.99.190.188-292
+  - US-38.121.43.71-049
+  - CA-134.195.196.227-005
+  - GB-172.99.190.205-100
+  - US-38.68.134.191-529
+  - CA-134.195.196.147-013
+  - US-38.121.43.71-507
+  - CA-198.57.27.184-010
+  - FR-145.239.1.100-037
+  - GB-172.99.190.109-040
+  - DE-172.105.244.165-307
+  - BV-46.29.219.246-084
+  - US-38.75.136.45-085
+  - CA-198.57.27.172-469
+  - US-38.68.134.191-505
+  - US-38.68.134.191-027
+  - CA-134.195.196.193-035
+  - US-38.75.136.45-427
+  - CA-134.195.196.51-445
+  - US-167.88.63.61-018
+  - US-38.75.136.127-502
+  - CA-134.195.196.128-443
+  - FR-51.255.87.96-470
+  - US-167.88.63.74-535
+  - US-38.68.134.23-088
+  - IN-192.46.209.227-310
+  - US-38.75.136.45-501
+  - CA-134.195.196.193-460
+  - BV-46.29.219.246-308
+  - CA-134.195.196.81-036
+  - CA-198.57.27.152-444
+  - CA-134.195.196.71-455
+  - US-167.88.63.61-536
+  - US-167.88.63.74-452
+  - FR-95.142.175.14-050
+  - CA-134.195.196.144-463
+  - GB-172.99.190.205-473
+  - US-167.88.63.74-020
+  - CA-134.195.196.147-462
+  - CA-198.57.27.152-008
+  - US-167.88.63.74-019
+  - GB-172.99.190.39-022
+  - GB-172.99.190.149-474
+  - DE-139.162.132.116-479
+  - US-38.107.226.48-025
+  - US-167.88.63.61-446
+  - CA-134.195.196.43-457
+  - US-38.107.226.48-1133
+  - GB-172.99.190.149-483
+  - GB-172.99.190.149-021
+  - GB-172.99.190.84-311
+  - CA-134.195.196.200-459
+  - US-38.68.135.112-503
+  - CA-134.195.196.71-454
+  - US-38.107.226.158-532
+  - CA-198.57.27.152-454
+  - CA-134.195.196.71-471
+  - CA-134.195.196.71-007
+  - FR-141.95.0.26-111
+  - US-38.107.226.48-312
+  - US-216.127.172.25-425
+  - GB-185.212.62.19-450
+  - US-89.208.252.110-499
+  - HK-218.253.159.69-475
+- name: 手动选择
+  type: select
+  proxies:
+  - US-38.68.134.191-079
+  - CH-37.120.137.82-048
+  - CA-198.57.27.184-299
+  - CA-134.195.196.200-003
+  - FR-149.202.82.172-114
+  - US-167.88.62.34-016
+  - CA-134.195.196.227-004
+  - CA-134.195.196.193-002
+  - FR-149.202.82.172-471
+  - KR-141.164.38.135-425
+  - CA-198.57.27.184-011
+  - GB-172.99.190.188-292
+  - US-38.121.43.71-049
+  - CA-134.195.196.227-005
+  - GB-172.99.190.205-100
+  - US-38.68.134.191-529
+  - CA-134.195.196.147-013
+  - US-38.121.43.71-507
+  - CA-198.57.27.184-010
+  - FR-145.239.1.100-037
+  - GB-172.99.190.109-040
+  - DE-172.105.244.165-307
+  - BV-46.29.219.246-084
+  - US-38.75.136.45-085
+  - CA-198.57.27.172-469
+  - US-38.68.134.191-505
+  - US-38.68.134.191-027
+  - CA-134.195.196.193-035
+  - US-38.75.136.45-427
+  - CA-134.195.196.51-445
+  - US-167.88.63.61-018
+  - US-38.75.136.127-502
+  - CA-134.195.196.128-443
+  - FR-51.255.87.96-470
+  - US-167.88.63.74-535
+  - US-38.68.134.23-088
+  - IN-192.46.209.227-310
+  - US-38.75.136.45-501
+  - CA-134.195.196.193-460
+  - BV-46.29.219.246-308
+  - CA-134.195.196.81-036
+  - CA-198.57.27.152-444
+  - CA-134.195.196.71-455
+  - US-167.88.63.61-536
+  - US-167.88.63.74-452
+  - FR-95.142.175.14-050
+  - CA-134.195.196.144-463
+  - GB-172.99.190.205-473
+  - US-167.88.63.74-020
+  - CA-134.195.196.147-462
+  - CA-198.57.27.152-008
+  - US-167.88.63.74-019
+  - GB-172.99.190.39-022
+  - GB-172.99.190.149-474
+  - DE-139.162.132.116-479
+  - US-38.107.226.48-025
+  - US-167.88.63.61-446
+  - CA-134.195.196.43-457
+  - US-38.107.226.48-1133
+  - GB-172.99.190.149-483
+  - GB-172.99.190.149-021
+  - GB-172.99.190.84-311
+  - CA-134.195.196.200-459
+  - US-38.68.135.112-503
+  - CA-134.195.196.71-454
+  - US-38.107.226.158-532
+  - CA-198.57.27.152-454
+  - CA-134.195.196.71-471
+  - CA-134.195.196.71-007
+  - FR-141.95.0.26-111
+  - US-38.107.226.48-312
+  - US-216.127.172.25-425
+  - GB-185.212.62.19-450
+  - US-89.208.252.110-499
+  - HK-218.253.159.69-475
+- name: 漏网之鱼
+  type: select
+  proxies:
+  - 节点选择
+  - REJECT
+  - DIRECT
+- name: 社交服务
+  type: select
+  proxies:
+  - 节点选择
+  - 美国节点
+  - 香港节点
+  - 狮城节点
+  - DIRECT
+- name: 苹果服务
+  type: select
+  proxies:
+  - 节点选择
+  - 美国节点
+  - 香港节点
+  - 狮城节点
+  - DIRECT
+- name: 微软服务
+  type: select
+  proxies:
+  - 节点选择
+  - 美国节点
+  - 香港节点
+  - 狮城节点
+  - DIRECT
+- name: 谷歌服务
+  type: select
+  proxies:
+  - 节点选择
+  - 美国节点
+  - 香港节点
+  - 狮城节点
+  - DIRECT
+- name: 全球媒体
+  type: select
+  proxies:
+  - 节点选择
+  - 美国节点
+  - 香港节点
+  - 狮城节点
+  - DIRECT
+- name: Emby视频
+  type: select
+  proxies:
+  - 节点选择
+  - 美国节点
+  - 香港节点
+  - 狮城节点
+  - DIRECT
+- name: 国家选择
+  type: select
+  proxies:
+  - 美国节点
+  - 狮城节点
+  - 香港节点
+  - 其他国家
+- name: 美国节点
+  type: url-test
+  url: http://www.gstatic.com/generate_204
+  interval: 300
+  proxies:
+  - US-38.68.134.191-079
+  - US-167.88.62.34-016
+  - US-38.121.43.71-049
+  - US-38.68.134.191-529
+  - US-38.121.43.71-507
+  - US-38.75.136.45-085
+  - US-38.68.134.191-505
+  - US-38.68.134.191-027
+  - US-38.75.136.45-427
+  - US-167.88.63.61-018
+  - US-38.75.136.127-502
+  - US-167.88.63.74-535
+  - US-38.68.134.23-088
+  - US-38.75.136.45-501
+  - US-167.88.63.61-536
+  - US-167.88.63.74-452
+  - US-167.88.63.74-020
+  - US-167.88.63.74-019
+  - US-38.107.226.48-025
+  - US-167.88.63.61-446
+  - US-38.107.226.48-1133
+  - US-38.68.135.112-503
+  - US-38.107.226.158-532
+  - US-38.107.226.48-312
+  - US-216.127.172.25-425
+  - US-89.208.252.110-499
+- name: 香港节点
+  type: url-test
+  url: http://www.gstatic.com/generate_204
+  interval: 300
+  proxies:
+  - HK-218.253.159.69-475
+- name: 狮城节点
+  type: url-test
+  url: http://www.gstatic.com/generate_204
+  interval: 300
+  proxies:
+  - DIRECT
+- name: 其他国家
+  type: url-test
+  url: http://www.gstatic.com/generate_204
+  interval: 300
+  proxies:
+  - CH-37.120.137.82-048
+  - CA-198.57.27.184-299
+  - CA-134.195.196.200-003
+  - FR-149.202.82.172-114
+  - CA-134.195.196.227-004
+  - CA-134.195.196.193-002
+  - FR-149.202.82.172-471
+  - KR-141.164.38.135-425
+  - CA-198.57.27.184-011
+  - GB-172.99.190.188-292
+  - CA-134.195.196.227-005
+  - GB-172.99.190.205-100
+  - CA-134.195.196.147-013
+  - CA-198.57.27.184-010
+  - FR-145.239.1.100-037
+  - GB-172.99.190.109-040
+  - DE-172.105.244.165-307
+  - BV-46.29.219.246-084
+  - CA-198.57.27.172-469
+  - CA-134.195.196.193-035
+  - CA-134.195.196.51-445
+  - CA-134.195.196.128-443
+  - FR-51.255.87.96-470
+  - IN-192.46.209.227-310
+  - CA-134.195.196.193-460
+  - BV-46.29.219.246-308
+  - CA-134.195.196.81-036
+  - CA-198.57.27.152-444
+  - CA-134.195.196.71-455
+  - FR-95.142.175.14-050
+  - CA-134.195.196.144-463
+  - GB-172.99.190.205-473
+  - CA-134.195.196.147-462
+  - CA-198.57.27.152-008
+  - GB-172.99.190.39-022
+  - GB-172.99.190.149-474
+  - DE-139.162.132.116-479
+  - CA-134.195.196.43-457
+  - GB-172.99.190.149-483
+  - GB-172.99.190.149-021
+  - GB-172.99.190.84-311
+  - CA-134.195.196.200-459
+  - CA-134.195.196.71-454
+  - CA-198.57.27.152-454
+  - CA-134.195.196.71-471
+  - CA-134.195.196.71-007
+  - FR-141.95.0.26-111
+  - GB-185.212.62.19-450
+- name: 负载均衡
+  type: load-balance
+  strategy: consistent-hashing
+  url: http://www.gstatic.com/generate_204
+  interval: 300
+  tolerance: 50
+  proxies:
+  - US-38.68.134.191-079
+  - CH-37.120.137.82-048
+  - CA-198.57.27.184-299
+  - CA-134.195.196.200-003
+  - FR-149.202.82.172-114
+  - US-167.88.62.34-016
+  - CA-134.195.196.227-004
+  - CA-134.195.196.193-002
+  - FR-149.202.82.172-471
+  - KR-141.164.38.135-425
+  - CA-198.57.27.184-011
+  - GB-172.99.190.188-292
+  - US-38.121.43.71-049
+  - CA-134.195.196.227-005
+  - GB-172.99.190.205-100
+  - US-38.68.134.191-529
+  - CA-134.195.196.147-013
+  - US-38.121.43.71-507
+  - CA-198.57.27.184-010
+  - FR-145.239.1.100-037
+  - GB-172.99.190.109-040
+  - DE-172.105.244.165-307
+  - BV-46.29.219.246-084
+  - US-38.75.136.45-085
+  - CA-198.57.27.172-469
+  - US-38.68.134.191-505
+  - US-38.68.134.191-027
+  - CA-134.195.196.193-035
+  - US-38.75.136.45-427
+  - CA-134.195.196.51-445
+  - US-167.88.63.61-018
+  - US-38.75.136.127-502
+  - CA-134.195.196.128-443
+  - FR-51.255.87.96-470
+  - US-167.88.63.74-535
+  - US-38.68.134.23-088
+  - IN-192.46.209.227-310
+  - US-38.75.136.45-501
+  - CA-134.195.196.193-460
+  - BV-46.29.219.246-308
+  - CA-134.195.196.81-036
+  - CA-198.57.27.152-444
+  - CA-134.195.196.71-455
+  - US-167.88.63.61-536
+  - US-167.88.63.74-452
+  - FR-95.142.175.14-050
+  - CA-134.195.196.144-463
+  - GB-172.99.190.205-473
+  - US-167.88.63.74-020
+  - CA-134.195.196.147-462
+  - CA-198.57.27.152-008
+  - US-167.88.63.74-019
+  - GB-172.99.190.39-022
+  - GB-172.99.190.149-474
+  - DE-139.162.132.116-479
+  - US-38.107.226.48-025
+  - US-167.88.63.61-446
+  - CA-134.195.196.43-457
+  - US-38.107.226.48-1133
+  - GB-172.99.190.149-483
+  - GB-172.99.190.149-021
+  - GB-172.99.190.84-311
+  - CA-134.195.196.200-459
+  - US-38.68.135.112-503
+  - CA-134.195.196.71-454
+  - US-38.107.226.158-532
+  - CA-198.57.27.152-454
+  - CA-134.195.196.71-471
+  - CA-134.195.196.71-007
+  - FR-141.95.0.26-111
+  - US-38.107.226.48-312
+  - US-216.127.172.25-425
+  - GB-185.212.62.19-450
+  - US-89.208.252.110-499
+  - HK-218.253.159.69-475
+- name: 失败切换
+  type: fallback
+  url: http://www.gstatic.com/generate_204
+  interval: 300
+  tolerance: 50
+  proxies:
+  - US-38.68.134.191-079
+  - CH-37.120.137.82-048
+  - CA-198.57.27.184-299
+  - CA-134.195.196.200-003
+  - FR-149.202.82.172-114
+  - US-167.88.62.34-016
+  - CA-134.195.196.227-004
+  - CA-134.195.196.193-002
+  - FR-149.202.82.172-471
+  - KR-141.164.38.135-425
+  - CA-198.57.27.184-011
+  - GB-172.99.190.188-292
+  - US-38.121.43.71-049
+  - CA-134.195.196.227-005
+  - GB-172.99.190.205-100
+  - US-38.68.134.191-529
+  - CA-134.195.196.147-013
+  - US-38.121.43.71-507
+  - CA-198.57.27.184-010
+  - FR-145.239.1.100-037
+  - GB-172.99.190.109-040
+  - DE-172.105.244.165-307
+  - BV-46.29.219.246-084
+  - US-38.75.136.45-085
+  - CA-198.57.27.172-469
+  - US-38.68.134.191-505
+  - US-38.68.134.191-027
+  - CA-134.195.196.193-035
+  - US-38.75.136.45-427
+  - CA-134.195.196.51-445
+  - US-167.88.63.61-018
+  - US-38.75.136.127-502
+  - CA-134.195.196.128-443
+  - FR-51.255.87.96-470
+  - US-167.88.63.74-535
+  - US-38.68.134.23-088
+  - IN-192.46.209.227-310
+  - US-38.75.136.45-501
+  - CA-134.195.196.193-460
+  - BV-46.29.219.246-308
+  - CA-134.195.196.81-036
+  - CA-198.57.27.152-444
+  - CA-134.195.196.71-455
+  - US-167.88.63.61-536
+  - US-167.88.63.74-452
+  - FR-95.142.175.14-050
+  - CA-134.195.196.144-463
+  - GB-172.99.190.205-473
+  - US-167.88.63.74-020
+  - CA-134.195.196.147-462
+  - CA-198.57.27.152-008
+  - US-167.88.63.74-019
+  - GB-172.99.190.39-022
+  - GB-172.99.190.149-474
+  - DE-139.162.132.116-479
+  - US-38.107.226.48-025
+  - US-167.88.63.61-446
+  - CA-134.195.196.43-457
+  - US-38.107.226.48-1133
+  - GB-172.99.190.149-483
+  - GB-172.99.190.149-021
+  - GB-172.99.190.84-311
+  - CA-134.195.196.200-459
+  - US-38.68.135.112-503
+  - CA-134.195.196.71-454
+  - US-38.107.226.158-532
+  - CA-198.57.27.152-454
+  - CA-134.195.196.71-471
+  - CA-134.195.196.71-007
+  - FR-141.95.0.26-111
+  - US-38.107.226.48-312
+  - US-216.127.172.25-425
+  - GB-185.212.62.19-450
+  - US-89.208.252.110-499
+  - HK-218.253.159.69-475
+rule-providers:
+  Apple:
+    type: http
+    behavior: domain
+    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/apple.txt
+    path: ./ruleset/TopFreeProxies/apple.yaml
+  iCloud:
+    type: http
+    behavior: domain
+    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/icloud.txt
+    path: ./ruleset/TopFreeProxies/icloud.yaml
+    interval: 86400
+  Microsoft:
+    type: http
+    behavior: classical
+    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@master/Clash-RuleSet-Classical/Microsoft.yaml
+    path: ./ruleset/TopFreeProxies/microsoft.yaml
+    interval: 86400
+  Google:
+    type: http
+    behavior: domain
+    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/google.txt
+    path: ./ruleset/TopFreeProxies/google.yaml
+    interval: 86400
+  GlobalMedia:
+    type: http
+    behavior: classical
+    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@master/Clash-RuleSet-Classical/GlobalMedia.yaml
+    path: ./ruleset/TopFreeProxies/globalmedia.yaml
+    interval: 86400
+  Telegram:
+    type: http
+    behavior: ipcidr
+    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/telegramcidr.txt
+    path: ./ruleset/TopFreeProxies/telegramcidr.yaml
+    interval: 86400
+  Twitter:
+    type: http
+    behavior: classical
+    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@master/Clash-RuleSet-Classical/PROXY/Twitter.yaml
+    path: ./ruleset/TopFreeProxies/twitter.yaml
+    interval: 86400
+  Private:
+    type: http
+    behavior: domain
+    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/private.txt
+    path: ./ruleset/TopFreeProxies/private.yaml
+    interval: 86400
+  Local-LAN:
+    type: http
+    behavior: classical
+    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@master/Clash-RuleSet-Classical/Special/Local-LAN.yaml
+    path: ./ruleset/TopFreeProxies/local-lan.yaml
+    interval: 86400
+  LAN-CIDR:
+    type: http
+    behavior: domain
+    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/lancidr.txt
+    path: ./ruleset/TopFreeProxies/lancidr.yaml
+    interval: 86400
+  Proxy:
+    type: http
+    behavior: domain
+    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/proxy.txt
+    path: ./ruleset/TopFreeProxies/proxy.yaml
+    interval: 86400
+  Reject:
+    type: http
+    behavior: domain
+    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/reject.txt
+    path: ./ruleset/TopFreeProxies/reject.yaml
+    interval: 86400
+rules:
+- PROCESS-NAME,v2ray,DIRECT
+- PROCESS-NAME,xray,DIRECT
+- PROCESS-NAME,naive,DIRECT
+- PROCESS-NAME,trojan,DIRECT
+- PROCESS-NAME,trojan-go,DIRECT
+- PROCESS-NAME,ss-local,DIRECT
+- PROCESS-NAME,privoxy,DIRECT
+- PROCESS-NAME,leaf,DIRECT
+- PROCESS-NAME,v2ray.exe,DIRECT
+- PROCESS-NAME,xray.exe,DIRECT
+- PROCESS-NAME,naive.exe,DIRECT
+- PROCESS-NAME,trojan.exe,DIRECT
+- PROCESS-NAME,trojan-go.exe,DIRECT
+- PROCESS-NAME,ss-local.exe,DIRECT
+- PROCESS-NAME,privoxy.exe,DIRECT
+- PROCESS-NAME,leaf.exe,DIRECT
+- PROCESS-NAME,Surge,DIRECT
+- PROCESS-NAME,Surge 2,DIRECT
+- PROCESS-NAME,Surge 3,DIRECT
+- PROCESS-NAME,Surge 4,DIRECT
+- PROCESS-NAME,Surge%202,DIRECT
+- PROCESS-NAME,Surge%203,DIRECT
+- PROCESS-NAME,Surge%204,DIRECT
+- PROCESS-NAME,Thunder,DIRECT
+- PROCESS-NAME,DownloadService,DIRECT
+- PROCESS-NAME,qBittorrent,DIRECT
+- PROCESS-NAME,Transmission,DIRECT
+- PROCESS-NAME,fdm,DIRECT
+- PROCESS-NAME,aria2c,DIRECT
+- PROCESS-NAME,Folx,DIRECT
+- PROCESS-NAME,NetTransport,DIRECT
+- PROCESS-NAME,uTorrent,DIRECT
+- PROCESS-NAME,WebTorrent,DIRECT
+- PROCESS-NAME,aria2c.exe,DIRECT
+- PROCESS-NAME,BitComet.exe,DIRECT
+- PROCESS-NAME,fdm.exe,DIRECT
+- PROCESS-NAME,NetTransport.exe,DIRECT
+- PROCESS-NAME,qbittorrent.exe,DIRECT
+- PROCESS-NAME,Thunder.exe,DIRECT
+- PROCESS-NAME,ThunderVIP.exe,DIRECT
+- PROCESS-NAME,transmission-daemon.exe,DIRECT
+- PROCESS-NAME,transmission-qt.exe,DIRECT
+- PROCESS-NAME,uTorrent.exe,DIRECT
+- PROCESS-NAME,WebTorrent.exe,DIRECT
+- DOMAIN,clash.razord.top,DIRECT
+- DOMAIN,yacd.haishan.me,DIRECT
+- GEOIP,CN,DIRECT
+- IP-CIDR,10.240.0.0/24,DIRECT,no-resolve
+- IP-CIDR,192.168.123.0/24,DIRECT,no-resolve
+- RULE-SET,LAN-CIDR,DIRECT,no-resolve
+- RULE-SET,Reject,REJECT,no-resolve
+- RULE-SET,Private,DIRECT,no-resolve
+- RULE-SET,Local-LAN,DIRECT,no-resolve
+- DOMAIN-SUFFIX,emby.wtf,Emby视频,no-resolve
+- DOMAIN-SUFFIX,bitwarden.net,DIRECT,no-resolve
+- DOMAIN-SUFFIX,bitwarden.com,DIRECT,no-resolve
+- RULE-SET,Apple,苹果服务
+- RULE-SET,iCloud,苹果服务
+- RULE-SET,Microsoft,微软服务
+- RULE-SET,Google,谷歌服务
+- RULE-SET,Twitter,社交服务
+- RULE-SET,Telegram,社交服务
+- RULE-SET,GlobalMedia,全球媒体
+- RULE-SET,Proxy,节点选择
+- MATCH,漏网之鱼
+
+
+```
