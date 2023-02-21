@@ -19,11 +19,14 @@ And here is another:
 </pre>
 
 <div id="{{ $blockID  }}" contenteditable="true" class="border w-100"></div>
+<div id="{{ $blockID  }}-output"></div>
+
 <script type="module">
 import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid/+esm';
     $(function(){
         var blockID = "{{ $blockID  }}";
         var input = document.getElementById(blockID);
+        var output = document.getElementById(blockID+'-output');
 
         mermaid.initialize({ startOnLoad: false });
         input.onkeyup = function() {
