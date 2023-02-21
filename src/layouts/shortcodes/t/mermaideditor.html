@@ -23,12 +23,12 @@ And here is another:
 
 <script type="module">
 import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid/+esm';
+mermaid.initialize({ startOnLoad: true });
     $(function(){
         var blockID = "{{ $blockID  }}";
         var input = document.getElementById(blockID);
         var output = document.getElementById(blockID+'-output');
 
-        mermaid.initialize({ startOnLoad: false });
         input.onkeyup = function() {
                 mermaid.render('theGraph', input.value, function(svgCode) {
                         output.innerHTML = svgCode;
