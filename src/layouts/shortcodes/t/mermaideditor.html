@@ -18,9 +18,21 @@ And here is another:
         B -->|tcp_456| D[Server2]
 </pre>
 
+<div id="{{ $blockID  }}" contenteditable="true" class="border w-100"></div>
 <script type="module">
-  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid/+esm';
-  mermaid.initialize({ startOnLoad: true });
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid/+esm';
+    $(function(){
+        var blockID = "{{ $blockID  }}";
+        var input = document.getElementById(blockID);
+
+        mermaid.initialize({ startOnLoad: false });
+        input.onkeyup = function() {
+        preview.innerHTML = input.value;
+        mermaidAPI.render('theGraph', input.value, function(svgCode) {
+                output.innerHTML = svgCode;
+        });
+        }
+    })
+
 </script>
 
-<div contenteditable="true" class="border w-100 h-100"></div>
