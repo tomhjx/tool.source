@@ -34,7 +34,7 @@ mermaid.initialize({ startOnLoad: false });
         input.onkeyup = function() {
                 mermaid.render('theGraph', input.innerText, function(svgCode) {
                         console.log(svgCode)
-                        output.innerHTML = svgCode;
+                        // output.innerHTML = svgCode;
                 });
         }
 
