@@ -19,8 +19,7 @@ And here is another:
 </pre>
 
 <div id="{{ $blockID  }}" contenteditable="true" class="border w-100"></div>
-<div id="{{ $blockID  }}-output"></div>
-<pre id="theGraph"></pre>
+<div id="{{ $blockID  }}-output" class="mermaid" ></div>
 
 <script type="module">
 import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid/+esm';
@@ -36,13 +35,18 @@ mermaid.initialize({ startOnLoad: false });
         //         });
         // }
 
-        mermaid.init({
+
+
+        input.onkeyup = function() {
+                output.innerText = input.innerText
+                mermaid.init({
                 flowchart: { useMaxWidth: false },
                 "theme": "default",
                 "themeVariables": {
                         "fontFamily": "Helvetica"
                 }
                 }, document.querySelectorAll(".mermaid"));
+        }
 
     })
 
