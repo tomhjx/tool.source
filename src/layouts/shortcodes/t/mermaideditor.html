@@ -19,22 +19,19 @@ And here is another:
 </pre>
 
 <div id="{{ $blockID  }}" contenteditable="true" class="border w-100"></div>
-<div id="{{ $blockID  }}-output"></div>
-<div id="theGraph"></div>
+<pre id="{{ $blockID  }}-output" class="mermaid"></pre>
 
 <script type="module">
 import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid/+esm';
-mermaid.initialize({ startOnLoad: true });
     $(function(){
         var blockID = "{{ $blockID  }}";
         var input = document.getElementById(blockID);
         var output = document.getElementById(blockID+'-output');
 
         input.onkeyup = function() {
-                mermaid.render('theGraph', input.value, function(svgCode) {
-                        output.innerHTML = svgCode;
-                });
-        }
+                output.innerText = input.value;
+                mermaid.initialize();
+        };
     })
 
 </script>
