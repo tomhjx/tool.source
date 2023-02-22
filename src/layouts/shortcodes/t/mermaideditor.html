@@ -29,24 +29,21 @@ mermaid.initialize({ startOnLoad: false });
         var input = document.getElementById(blockID);
         var output = document.getElementById(blockID+'-output');
 
-        // input.onkeyup = function() {
-        //         mermaid.render('theGraph', input.innerText, function(svgCode) {
-        //                 output.innerHTML = svgCode;
-        //         });
-        // }
-
-
-
         input.onkeyup = function() {
-                output.innerText = input.innerText
-                mermaid.init({
-                flowchart: { useMaxWidth: false },
-                "theme": "default",
-                "themeVariables": {
-                        "fontFamily": "Helvetica"
-                }
-                }, output);
+                mermaid.render(input.innerText, output);
         }
+
+
+        // input.onkeyup = function() {
+        //         output.innerText = input.innerText
+        //         mermaid.init({
+        //         flowchart: { useMaxWidth: false },
+        //         "theme": "default",
+        //         "themeVariables": {
+        //                 "fontFamily": "Helvetica"
+        //         }
+        //         }, output);
+        // }
 
     })
 
