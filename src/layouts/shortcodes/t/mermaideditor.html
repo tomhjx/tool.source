@@ -1,12 +1,11 @@
 {{ $_hugo_config := `{ "version": 1 }` }}
 {{ $blockID := printf "mermaideditorcontainer%d" .Ordinal }}
-
-<div id="{{ $blockID  }}" contenteditable="true" class="border w-100" style="height: 200px;"></div>
+<textarea id="{{ $blockID  }}" class="border w-100" style="height: 200px;" ></textarea>
 <div id="{{ $blockID  }}-output" ></div>
 <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
 <script >
     $(function(){
-        console.log("v2023-02-23 00:50:29")
+        console.log("v2023-02-23 00:55:41")
         var blockID = "{{ $blockID  }}";
         var input = document.getElementById(blockID);
         var output = document.getElementById(blockID+'-output');
