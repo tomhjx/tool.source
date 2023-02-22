@@ -5,13 +5,13 @@
 <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
 <script >
     $(function(){
-        console.log("v2023-02-23 00:55:41")
+        console.log("v2023-02-23 00:58:27")
         var blockID = "{{ $blockID  }}";
         var input = document.getElementById(blockID);
         var output = document.getElementById(blockID+'-output');
 
         input.onkeyup = function() {
-                mermaid.mermaidAPI.render('theGraph', input.innerText, function(svgCode) {
+                mermaid.mermaidAPI.render('theGraph', input.value, function(svgCode) {
                         output.innerHTML = svgCode;
                 });
         }
