@@ -20,19 +20,17 @@ And here is another:
 
 <div id="{{ $blockID  }}" contenteditable="true" class="border w-100"></div>
 <div id="{{ $blockID  }}-output" ></div>
-<!-- <div id="theGraph" ></div> -->
 <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
 <script >
     $(function(){
-        console.log("v2023-02-23 00:32:09")
+        console.log("v2023-02-23 00:34:58")
         var blockID = "{{ $blockID  }}";
         var input = document.getElementById(blockID);
         var output = document.getElementById(blockID+'-output');
 
         input.onkeyup = function() {
                 mermaid.mermaidAPI.render('theGraph', input.innerText, function(svgCode) {
-                        console.log(svgCode)
-                        // output.innerHTML = svgCode;
+                        output.innerHTML = svgCode;
                 });
         }
 
