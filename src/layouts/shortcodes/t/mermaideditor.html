@@ -21,10 +21,8 @@ And here is another:
 <div id="{{ $blockID  }}" contenteditable="true" class="border w-100"></div>
 <div id="{{ $blockID  }}-output" ></div>
 <!-- <div id="theGraph" ></div> -->
-
-<script type="module">
-import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid/+esm';
-mermaid.initialize({ startOnLoad: false });
+<script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+<script >
     $(function(){
         console.log("v2023-02-23 00:28:49")
         var blockID = "{{ $blockID  }}";
