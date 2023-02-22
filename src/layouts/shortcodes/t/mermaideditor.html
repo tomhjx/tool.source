@@ -20,13 +20,13 @@ And here is another:
 
 <div id="{{ $blockID  }}" contenteditable="true" class="border w-100"></div>
 <div id="{{ $blockID  }}-output" ></div>
-<div id="theGraph" ></div>
+<!-- <div id="theGraph" ></div> -->
 
 <script type="module">
 import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid/+esm';
 mermaid.initialize({ startOnLoad: false });
     $(function(){
-        console.log("v2023-02-23 00:11:26")
+        console.log("v2023-02-23 00:15:55")
         var blockID = "{{ $blockID  }}";
         var input = document.getElementById(blockID);
         var output = document.getElementById(blockID+'-output');
