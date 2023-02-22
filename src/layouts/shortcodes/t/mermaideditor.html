@@ -29,7 +29,7 @@ import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid/+esm';
         var output = document.getElementById(blockID+'-output');
 
         input.onkeyup = function() {
-                output.innerText = input.value;
+                output.innerText = input.innerText;
                 console.log(output.innerText)
                 mermaid.initialize();
         };
