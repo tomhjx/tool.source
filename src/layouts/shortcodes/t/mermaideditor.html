@@ -1,8 +1,6 @@
 {{ $_hugo_config := `{ "version": 1 }` }}
 {{ $blockID := printf "mermaideditorcontainer%d" .Ordinal }}
 
-
-
 <div class="container text-left">
         <div class="row">
           <div class="col">
@@ -12,12 +10,7 @@
                 <button type="button" class="btn btn-primary">Copy Image</button>
           </div>
         </div>
-
-        <div class="row">
-                <div id="{{ $blockID  }}-output" class="col">
-                </div>
-        </div>
-
+        <div id="{{ $blockID  }}-output" class="row"></div>
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
