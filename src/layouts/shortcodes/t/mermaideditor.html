@@ -1,9 +1,13 @@
 {{ $_hugo_config := `{ "version": 1 }` }}
 {{ $blockID := printf "mermaideditorcontainer%d" .Ordinal }}
 <textarea id="{{ $blockID  }}" class="border w-50" style="height: 200px;" ></textarea>
+
+<button type="button" class="btn btn-primary">Copy Image</button>
+
 <div id="{{ $blockID  }}-output" ></div>
 <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
 <script >
+    mermaid.initialize({startOnLoad:false});
     $(function(){
         console.log("v2023-02-23 01:01:43")
         var blockID = "{{ $blockID  }}";
@@ -15,20 +19,8 @@
                         output.innerHTML = svgCode;
                 });
         }
-
-
-
-        // input.onkeyup = function() {
-        //         output.innerText = input.innerText
-        //         mermaid.init({
-        //         flowchart: { useMaxWidth: false },
-        //         "theme": "default",
-        //         "themeVariables": {
-        //                 "fontFamily": "Helvetica"
-        //         }
-        //         }, output);
-        // }
-
+        // svg to png
+        // https://javascript.plainenglish.io/3-steps-to-convert-svgs-to-image-file-formats-png-in-javascript-5394bf837185
     })
 
 </script>
