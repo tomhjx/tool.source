@@ -1,10 +1,25 @@
 {{ $_hugo_config := `{ "version": 1 }` }}
 {{ $blockID := printf "mermaideditorcontainer%d" .Ordinal }}
-<textarea id="{{ $blockID  }}" class="border w-50" style="height: 200px;" ></textarea>
 
-<button type="button" class="btn btn-primary">Copy Image</button>
 
-<div id="{{ $blockID  }}-output" ></div>
+
+<div class="container text-center">
+        <div class="row">
+          <div class="col">
+                <textarea id="{{ $blockID  }}" class="border w-50" style="height: 200px;" ></textarea>
+          </div>
+          <div class="col">
+                <button type="button" class="btn btn-primary">Copy Image</button>
+          </div>
+        </div>
+
+        <div class="row">
+                <div id="{{ $blockID  }}-output" class="col">
+                </div>
+        </div>
+
+</div>
+
 <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
 <script >
     mermaid.initialize({startOnLoad:false});
