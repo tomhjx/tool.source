@@ -5,14 +5,14 @@
         <div class="row">
           <div class="col">
                 <textarea id="{{ $blockID  }}" class="border w-100" style="height: 200px;" ></textarea>
-                <button type="button" class="btn btn-secondary">Link to view</button>
-                <button type="button" class="btn btn-secondary">Link to Image</button>
-                <button type="button" class="btn btn-secondary">Link to SVG</button>
-                <button type="button" class="btn btn-secondary">Copy Image</button>
-                <button type="button" class="btn btn-secondary">Download PNG</button>
-                <button type="button" class="btn btn-secondary">Download SVG</button>
+                <button type="button" class="btn btn-secondary" id="{{ $blockID  }}LinkToView" >Link to view</button>
+                <button type="button" class="btn btn-secondary" id="{{ $blockID  }}LinkToIMG" >Link to Image</button>
+                <button type="button" class="btn btn-secondary" id="{{ $blockID  }}LinkToSVG" >Link to SVG</button>
+                <button type="button" class="btn btn-secondary" id="{{ $blockID  }}CopyToIMG" >Copy Image</button>
+                <button type="button" class="btn btn-secondary" id="{{ $blockID  }}DownloadPNG" >Download PNG</button>
+                <button type="button" class="btn btn-secondary" id="{{ $blockID  }}DownloadSVG" >Download SVG</button>
           </div>
-          <div id="{{ $blockID  }}-output" class="col"></div>
+          <div id="{{ $blockID  }}Output" class="col"></div>
 
         </div>
 </div>
@@ -24,13 +24,18 @@
         console.log("v2023-02-23 01:01:43")
         var blockID = "{{ $blockID  }}";
         var input = document.getElementById(blockID);
-        var output = document.getElementById(blockID+'-output');
+        var output = document.getElementById(blockID+'Output');
 
         input.onkeyup = function() {
                 mermaid.mermaidAPI.render('theGraph', input.value, function(svgCode) {
                         output.innerHTML = svgCode;
                 });
         }
+
+        $('#'+blockID+'DownloadPNG').click(function(){
+                console.log('click DownloadPNG.')
+        });
+
         // svg to png
         // https://javascript.plainenglish.io/3-steps-to-convert-svgs-to-image-file-formats-png-in-javascript-5394bf837185
     })
