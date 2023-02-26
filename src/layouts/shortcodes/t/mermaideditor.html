@@ -61,7 +61,6 @@
                 _ctx.scale(scale, scale);
                 _ctx.drawImage(_img, 0, 0, Math.round(imgW/scale), Math.round(imgH/scale));
 
-                var dwnLink=document.createElement('a');     
                 // Note: fileName = original .svg filename     dwnLink.download=fileName.substr(0,fileName.lastIndexOf('.'))+'.png';
                 window.open(_canvas.toDataURL())
         });
