@@ -25,7 +25,7 @@
         var blockID = "{{ $blockID  }}";
         var input = document.getElementById(blockID);
         var output = document.getElementById(blockID+'Output');
-        var svgData;
+        var svgData = '';
 
         input.onkeyup = function() {
                 mermaid.mermaidAPI.render('theGraph', input.value, function(svgCode) {
