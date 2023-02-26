@@ -32,9 +32,40 @@
                 });
         }
 
+        const loadImage = (url) => new Promise((resolve, reject) => {
+        const img = new Image(); // alt: document.createElement('img')
+                img.addEventListener('load', () => resolve(img));
+                img.addEventListener('error', (err) => reject(err));
+                img.src = url;
+        });
+
+
         $('#'+blockID+'DownloadPNG').click(function(){
                 console.log('click DownloadPNG.')
         });
+
+        $('#'+blockID+'LinkToView').click(function(){
+                var _img = await loadImage(b64str);
+                var imgH=_img.naturalHeight; // original file height
+                var imgW=_img.naturalWidth; // original file width
+                const scale = window.devicePixelRatio*2;
+
+                var _canvas = document.createElement('canvas');
+                _canvas.width=imgW;
+                _canvas.height=imgH;
+                var _ctx = _canvas.getContext('2d');
+                _canvas['style']['width'] = `${Math.round(imgW/scale)}px`;
+                _canvas['style']['height'] = `${Math.round(imgH/scale)}px`;
+                _canvas['style']['margin'] = '0';
+                _canvas['style']['padding'] = '0';
+                _ctx.scale(scale, scale);
+                _ctx.drawImage(_img, 0, 0, Math.round(imgW/scale), Math.round(imgH/scale));
+
+                var dwnLink=document.createElement('a');     
+                // Note: fileName = original .svg filename     dwnLink.download=fileName.substr(0,fileName.lastIndexOf('.'))+'.png';
+                window.open(_canvas.toDataURL())
+        });
+
 
         // svg to png
         // https://javascript.plainenglish.io/3-steps-to-convert-svgs-to-image-file-formats-png-in-javascript-5394bf837185
