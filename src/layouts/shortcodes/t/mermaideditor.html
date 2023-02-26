@@ -25,10 +25,11 @@
         var blockID = "{{ $blockID  }}";
         var input = document.getElementById(blockID);
         var output = document.getElementById(blockID+'Output');
+        var svgData;
 
         input.onkeyup = function() {
                 mermaid.mermaidAPI.render('theGraph', input.value, function(svgCode) {
-                        output.innerHTML = svgCode;
+                        svgData = output.innerHTML = svgCode;
                 });
         }
 
@@ -45,6 +46,9 @@
         });
 
         $('#'+blockID+'LinkToView').click(function(){
+                var DOMURL = window.URL || window.webkitURL || window;
+                var b64str = DOMURL.createObjectURL(svgData);
+
                 var _img = await loadImage(b64str);
                 var imgH=_img.naturalHeight; // original file height
                 var imgW=_img.naturalWidth; // original file width
