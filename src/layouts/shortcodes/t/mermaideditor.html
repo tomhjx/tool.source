@@ -21,7 +21,7 @@
 <script >
     mermaid.initialize({startOnLoad:false});
     $(function(){
-        console.log("v2023-02-27 00:47:47")
+        console.log("v2023-02-27 00:59:53")
         var blockID = "{{ $blockID  }}";
         var input = document.getElementById(blockID);
         var output = document.getElementById(blockID+'Output');
@@ -33,12 +33,11 @@
                 });
         }
 
-        const loadImage = (url) => new Promise((resolve, reject) => {
-        const img = new Image(); // alt: document.createElement('img')
-                img.addEventListener('load', () => resolve(img));
-                img.addEventListener('error', (err) => reject(err));
+        function loadImage(onload) {
+                var img = new Image(); // alt: document.createElement('img')
+                img.addEventListener('load', onload);
                 img.src = url;
-        });
+        }
 
 
         $('#'+blockID+'DownloadPNG').click(function(){
@@ -49,8 +48,9 @@
                 var DOMURL = window.URL || window.webkitURL || window;
                 var b64str = DOMURL.createObjectURL(svgData);
 
-                var _img = await loadImage(b64str);
-                var imgH=_img.naturalHeight; // original file height
+                var _img = loadImage(b64str, function(){
+
+                        var imgH=_img.naturalHeight; // original file height
                 var imgW=_img.naturalWidth; // original file width
                 const scale = window.devicePixelRatio*2;
 
@@ -67,6 +67,9 @@
 
                 // Note: fileName = original .svg filename     dwnLink.download=fileName.substr(0,fileName.lastIndexOf('.'))+'.png';
                 window.open(_canvas.toDataURL())
+
+                });
+
         });
 
 
