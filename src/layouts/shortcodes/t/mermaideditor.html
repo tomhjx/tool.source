@@ -36,7 +36,7 @@
 
         function loadImage(onload) {
                 var img = new Image(); // alt: document.createElement('img')
-                img.addEventListener('load', onload);
+                img.onload = onload;
                 img.src = url;
         }
 
