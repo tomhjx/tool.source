@@ -47,6 +47,7 @@
 
         $('#'+blockID+'LinkToView').click(function(){
                 var svgData = new XMLSerializer().serializeToString(svg);
+                var blob = new Blob([svgData], { type: 'image/svg+xml' });
                 var b64str = URL.createObjectURL(svgData);
 
                 var _img = loadImage(b64str, function(){
