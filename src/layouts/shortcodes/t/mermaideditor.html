@@ -30,6 +30,7 @@
         input.onkeyup = function() {
                 mermaid.mermaidAPI.render('theGraph', input.value, function(svgCode) {
                         svgData = output.innerHTML = svgCode;
+                        console.log(svgCode)
                 });
         }
 
@@ -50,23 +51,23 @@
 
                 var _img = loadImage(b64str, function(){
 
-                var imgH=_img.naturalHeight; // original file height
-                var imgW=_img.naturalWidth; // original file width
-                const scale = window.devicePixelRatio*2;
+                        var imgH=_img.naturalHeight; // original file height
+                        var imgW=_img.naturalWidth; // original file width
+                        const scale = window.devicePixelRatio*2;
 
-                var _canvas = document.createElement('canvas');
-                _canvas.width=imgW;
-                _canvas.height=imgH;
-                var _ctx = _canvas.getContext('2d');
-                _canvas['style']['width'] = `${Math.round(imgW/scale)}px`;
-                _canvas['style']['height'] = `${Math.round(imgH/scale)}px`;
-                _canvas['style']['margin'] = '0';
-                _canvas['style']['padding'] = '0';
-                _ctx.scale(scale, scale);
-                _ctx.drawImage(_img, 0, 0, Math.round(imgW/scale), Math.round(imgH/scale));
+                        var _canvas = document.createElement('canvas');
+                        _canvas.width=imgW;
+                        _canvas.height=imgH;
+                        var _ctx = _canvas.getContext('2d');
+                        _canvas['style']['width'] = `${Math.round(imgW/scale)}px`;
+                        _canvas['style']['height'] = `${Math.round(imgH/scale)}px`;
+                        _canvas['style']['margin'] = '0';
+                        _canvas['style']['padding'] = '0';
+                        _ctx.scale(scale, scale);
+                        _ctx.drawImage(_img, 0, 0, Math.round(imgW/scale), Math.round(imgH/scale));
 
-                // Note: fileName = original .svg filename     dwnLink.download=fileName.substr(0,fileName.lastIndexOf('.'))+'.png';
-                window.open(_canvas.toDataURL())
+                        // Note: fileName = original .svg filename     dwnLink.download=fileName.substr(0,fileName.lastIndexOf('.'))+'.png';
+                        window.open(_canvas.toDataURL())
 
                 });
 
