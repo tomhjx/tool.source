@@ -21,7 +21,7 @@
 <script >
     mermaid.initialize({startOnLoad:false});
     $(function(){
-        console.log("2023-02-28 09:01:23")
+        console.log("2023-02-28 09:07:33")
         var blockID = "{{ $blockID  }}";
         var input = document.getElementById(blockID);
         var output = document.getElementById(blockID+'Output');
@@ -38,6 +38,7 @@
                 var img = new Image(); // alt: document.createElement('img')
                 img.onload = onload;
                 img.src = url;
+                return img;
         }
 
 
