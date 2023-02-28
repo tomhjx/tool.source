@@ -34,7 +34,7 @@
                 });
         }
 
-        function loadImage(onload) {
+        function loadImage(url, onload) {
                 var img = new Image(); // alt: document.createElement('img')
                 img.onload = onload;
                 img.src = url;
@@ -48,9 +48,11 @@
         $('#'+blockID+'LinkToView').click(function(){
                 var svgData = new XMLSerializer().serializeToString(svg);
                 var blob = new Blob([svgData], { type: 'image/svg+xml' });
-                var b64str = URL.createObjectURL(svgData);
 
-                var _img = loadImage(b64str, function(){
+                var win = window.URL || window.webkitURL || window;
+                var url = win.createObjectURL(svgData);
+
+                var _img = loadImage(url, function(){
 
                         var imgH=_img.naturalHeight; // original file height
                         var imgW=_img.naturalWidth; // original file width
