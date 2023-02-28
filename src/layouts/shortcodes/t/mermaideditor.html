@@ -54,8 +54,8 @@
 
                 var _img = loadImage(url, function(){
 
-                        var imgH=_img.naturalHeight; // original file height
-                        var imgW=_img.naturalWidth; // original file width
+                        var imgH=_img.height; // original file height
+                        var imgW=_img.width; // original file width
                         const scale = window.devicePixelRatio*2;
 
                         var _canvas = document.createElement('canvas');
