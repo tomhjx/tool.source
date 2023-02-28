@@ -50,7 +50,7 @@
                 var blob = new Blob([svgData], { type: 'image/svg+xml' });
 
                 var win = window.URL || window.webkitURL || window;
-                var url = win.createObjectURL(svgData);
+                var url = win.createObjectURL(blob);
 
                 var _img = loadImage(url, function(){
 
