@@ -36,8 +36,8 @@
 
         function loadImage(url, onload) {
                 var img = new Image(); // alt: document.createElement('img')
-                img.crossOrigin="anonymous";
                 img.onload = onload;
+                img.crossOrigin="anonymous";
                 img.src = url;
                 return img;
         }
