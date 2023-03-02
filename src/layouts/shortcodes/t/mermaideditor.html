@@ -18,15 +18,13 @@
 </div>
 
 
-<canvas id="canvas" width="5" height="5"></canvas>
 
 <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
 <script >
     mermaid.initialize({startOnLoad:false});
     $(function(){
-        console.log("2023-03-03 00:49:08")
-
-        var canvas = document.getElementById("canvas");
+        console.log("2023-03-03 01:08:32")
+        var canvas = document.createElement('canvas');
         var dataURL = canvas.toDataURL();
         console.log(dataURL);
 
