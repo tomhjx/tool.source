@@ -17,11 +17,19 @@
         </div>
 </div>
 
+
+<canvas id="canvas" width="5" height="5"></canvas>
+
 <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
 <script >
     mermaid.initialize({startOnLoad:false});
     $(function(){
-        console.log("2023-03-02 09:29:00")
+        console.log("2023-03-03 00:49:08")
+
+        var canvas = document.getElementById("canvas");
+        var dataURL = canvas.toDataURL();
+        console.log(dataURL);
+
         var blockID = "{{ $blockID  }}";
         var input = document.getElementById(blockID);
         var output = document.getElementById(blockID+'Output');
