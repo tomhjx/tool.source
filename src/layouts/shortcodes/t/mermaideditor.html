@@ -21,7 +21,7 @@
 <script >
     mermaid.initialize({startOnLoad:false});
     $(function(){
-        console.log("2023-02-28 09:07:33")
+        console.log("2023-03-02 09:02:33")
         var blockID = "{{ $blockID  }}";
         var input = document.getElementById(blockID);
         var output = document.getElementById(blockID+'Output');
@@ -36,6 +36,7 @@
 
         function loadImage(url, onload) {
                 var img = new Image(); // alt: document.createElement('img')
+                img.crossOrigin="anonymous";
                 img.onload = onload;
                 img.src = url;
                 return img;
@@ -71,7 +72,7 @@
                         _ctx.drawImage(_img, 0, 0, Math.round(imgW/scale), Math.round(imgH/scale));
 
                         // Note: fileName = original .svg filename     dwnLink.download=fileName.substr(0,fileName.lastIndexOf('.'))+'.png';
-                        window.open(_canvas.toDataURL())
+                        window.open(_canvas.toDataURL('image/png'))
 
                 });
 
