@@ -21,7 +21,7 @@
 <script >
     mermaid.initialize({startOnLoad:false});
     $(function(){
-        console.log("2023-03-02 09:24:14")
+        console.log("2023-03-02 09:29:00")
         var blockID = "{{ $blockID  }}";
         var input = document.getElementById(blockID);
         var output = document.getElementById(blockID+'Output');
@@ -67,10 +67,10 @@
                         _canvas.style.width = imgW+"px" ;
                         _canvas.style.hight = imgH+"px";
 
-                        var context = _canvas.getContext("2d");
-                        context.scale(scaleBy,scaleBy);
-                        context.drawImage(_img, 0, 0);
-                        
+                        var _ctx = _canvas.getContext("2d");
+                        _ctx.scale(scaleBy,scaleBy);
+                        _ctx.drawImage(_img, 0, 0);
+
                         // Note: fileName = original .svg filename     dwnLink.download=fileName.substr(0,fileName.lastIndexOf('.'))+'.png';
                         // window.open(_canvas.toDataURL('image/png'))
                         console.log(_canvas.toDataURL('image/png'))
