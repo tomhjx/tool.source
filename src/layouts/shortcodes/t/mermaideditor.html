@@ -21,7 +21,7 @@
 <script >
     mermaid.initialize({startOnLoad:false});
     $(function(){
-        console.log("{{  $.Date.Format "2006-01-02 15:04:05" }}")
+        console.log("2023-03-02 09:24:14")
         var blockID = "{{ $blockID  }}";
         var input = document.getElementById(blockID);
         var output = document.getElementById(blockID+'Output');
@@ -58,19 +58,19 @@
 
                         var imgH=_img.height; // original file height
                         var imgW=_img.width; // original file width
+                        var scaleBy = 2;
                         const scale = window.devicePixelRatio*2;
 
                         var _canvas = document.createElement('canvas');
-                        _canvas.width=imgW;
-                        _canvas.height=imgH;
-                        var _ctx = _canvas.getContext('2d');
-                        _canvas['style']['width'] = `${Math.round(imgW/scale)}px`;
-                        _canvas['style']['height'] = `${Math.round(imgH/scale)}px`;
-                        _canvas['style']['margin'] = '0';
-                        _canvas['style']['padding'] = '0';
-                        _ctx.scale(scale, scale);
-                        _ctx.drawImage(_img, 0, 0, Math.round(imgW/scale), Math.round(imgH/scale));
+                        _canvas.width = imgW*scaleBy;
+                        _canvas.height = imgH*scaleBy;
+                        _canvas.style.width = imgW+"px" ;
+                        _canvas.style.hight = imgH+"px";
 
+                        var context = _canvas.getContext("2d");
+                        context.scale(scaleBy,scaleBy);
+                        context.drawImage(_img, 0, 0);
+                        
                         // Note: fileName = original .svg filename     dwnLink.download=fileName.substr(0,fileName.lastIndexOf('.'))+'.png';
                         // window.open(_canvas.toDataURL('image/png'))
                         console.log(_canvas.toDataURL('image/png'))
