@@ -19,7 +19,6 @@
 </div>
 
 
-
 <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
 <script >
     mermaid.initialize({startOnLoad:false});
@@ -32,7 +31,7 @@
         var svg = null
 
         var img = new Image();
-
+        $( "body" ).append(img);
 
         input.onkeyup = function() {
                 mermaid.mermaidAPI.render('theGraph', input.value, function(svgCode) {
