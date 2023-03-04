@@ -57,7 +57,7 @@
                 var win = window.URL || window.webkitURL || window;
                 var url = win.createObjectURL(blob);
 
-                var img = new Image(); // alt: document.createElement('img')
+                var img = document.createElement('img');
                 loadImage(img, url, function(){
 
                         var imgH=img.height; // original file height
