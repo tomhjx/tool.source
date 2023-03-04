@@ -1,5 +1,6 @@
 {{ $_hugo_config := `{ "version": 1 }` }}
 {{ $blockID := printf "mermaideditorcontainer%d" .Ordinal }}
+{{ $nowDate := now.Format "2006" }}
 
 <div class="container text-left">
         <div class="row">
@@ -23,7 +24,7 @@
 <script >
     mermaid.initialize({startOnLoad:false});
     $(function(){
-        console.log("2023-03-04 08:10:50")
+        console.log("{{ $nowDate }}")
 
         var blockID = "{{ $blockID  }}";
         var input = document.getElementById(blockID);
