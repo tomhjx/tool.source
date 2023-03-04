@@ -88,7 +88,7 @@
 
         downloadPNG.click(function(){
                 downloadPNG.attr("href", draw().toDataURL('image/png'))
-                downloadPNG.attr("download", Math.uuid()+'.png')
+                downloadPNG.attr("download", self.crypto.randomUUID()+'.png')
         });
 
         // $('#'+blockID+'LinkToView').click(function(){
