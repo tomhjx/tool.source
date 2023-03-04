@@ -42,6 +42,8 @@
         img.crossOrigin="anonymous";
         img.onload=function(){
                 linkToView.href = img.src
+                console.log("img.naturalWidth="+img.naturalWidth)
+                console.log("img.naturalHeight="+img.naturalHeight)
         }
 
         function draw() {
