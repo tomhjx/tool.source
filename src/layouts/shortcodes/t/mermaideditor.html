@@ -34,12 +34,39 @@
         var downloadSVG = $('#'+blockID+'DownloadSVG');
         var downloadPNG = $('#'+blockID+'DownloadPNG');
         var svg = null
+        var canvas = null
+
+        // define
 
         var img = new Image();
         img.crossOrigin="anonymous";
         img.onload=function(){
                 linkToView.href = img.src
         }
+
+        function draw() {
+                if (!canvas) {
+                        canvas = document.createElement('canvas');
+                }
+                
+                var imgH=img.naturalHeight; // original file height
+                var imgW=img.naturalWidth; // original file width
+                
+                var scaleBy = 2;
+                var scale = window.devicePixelRatio*scaleBy;
+                canvas.width = Math.floor(imgW*scale);
+                canvas.height = Math.floor(imgH*scale);
+                // _canvas.style.width =  Math.floor(imgH*scale)+"px" ;
+                // _canvas.style.hight = Math.floor(imgW*scale)+"px";
+
+                var ctx = canvas.getContext("2d");
+                ctx.scale(scale,scale);
+                ctx.drawImage(img, 0, 0, imgW, imgH);
+                return canvas;
+        }
+
+        // bind
+
 
         input.onkeyup = function() {
                 mermaid.mermaidAPI.render('theGraph', input.value, function(svgCode) {
@@ -59,30 +86,8 @@
                 downloadSVG.attr("href", img.src)
         });
 
-        function loadImage(img, url, onload) {
-                img.onload = onload;
-                img.crossOrigin="anonymous";
-                img.src = url;
-                return img;
-        }
-
-
         downloadPNG.click(function(){
-                var imgH=img.naturalHeight; // original file height
-                var imgW=img.naturalWidth; // original file width
-                
-                var scaleBy = 2;
-                var _canvas = document.createElement('canvas');
-                var scale = window.devicePixelRatio*scaleBy;
-                _canvas.width = Math.floor(imgW*scale);
-                _canvas.height = Math.floor(imgH*scale);
-                // _canvas.style.width =  Math.floor(imgH*scale)+"px" ;
-                // _canvas.style.hight = Math.floor(imgW*scale)+"px";
-
-                var _ctx = _canvas.getContext("2d");
-                _ctx.scale(scale,scale);
-                _ctx.drawImage(img, 0, 0, imgW, imgH);
-                downloadPNG.attr("href", _canvas.toDataURL('image/png'))
+                downloadPNG.attr("href", draw().toDataURL('image/png'))
         });
 
         // $('#'+blockID+'LinkToView').click(function(){
