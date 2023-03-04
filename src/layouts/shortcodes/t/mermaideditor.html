@@ -38,8 +38,6 @@
         var img = new Image();
         img.crossOrigin="anonymous";
         img.onload=function(){
-                console.log("img had load.")
-                console.log(img.src)
                 linkToView.href = img.src
         }
 
@@ -78,13 +76,12 @@
                 var scale = window.devicePixelRatio*scaleBy;
                 _canvas.width = Math.floor(imgW*scale);
                 _canvas.height = Math.floor(imgH*scale);
-                _canvas.style.width =  Math.floor(imgH*scale)+"px" ;
-                _canvas.style.hight = Math.floor(imgW*scale)+"px";
+                // _canvas.style.width =  Math.floor(imgH*scale)+"px" ;
+                // _canvas.style.hight = Math.floor(imgW*scale)+"px";
 
                 var _ctx = _canvas.getContext("2d");
                 _ctx.scale(scale,scale);
                 _ctx.drawImage(img, 0, 0, imgW, imgH);
-                // _ctx.drawImage(img, 0, 0);
                 downloadPNG.attr("href", _canvas.toDataURL('image/png'))
         });
 
