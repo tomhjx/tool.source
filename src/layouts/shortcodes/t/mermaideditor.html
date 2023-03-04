@@ -10,7 +10,8 @@
                 <button type="button" class="btn btn-secondary" id="{{ $blockID  }}LinkToIMG" >Link to Image</button>
                 <button type="button" class="btn btn-secondary" id="{{ $blockID  }}LinkToSVG" >Link to SVG</button>
                 <button type="button" class="btn btn-secondary" id="{{ $blockID  }}CopyToIMG" >Copy Image</button>
-                <button type="button" class="btn btn-secondary" id="{{ $blockID  }}DownloadPNG" >Download PNG</button>
+                <!-- <button type="button" class="btn btn-secondary" id="{{ $blockID  }}DownloadPNG" >Download PNG</button> -->
+                <a class="btn btn-secondary" id="{{ $blockID  }}DownloadPNG" href="javascript:;" download="a.png" >Download PNG</a>
                 <!-- <button type="button" class="btn btn-secondary" id="{{ $blockID  }}DownloadSVG" >Download SVG</button> -->
                 <a class="btn btn-secondary" id="{{ $blockID  }}DownloadSVG" href="javascript:;" download="a.svg"  >Download SVG</a>
           </div>
@@ -31,6 +32,7 @@
         var output = document.getElementById(blockID+'Output');
         var linkToView = document.getElementById(blockID+'LinkToView');
         var downloadSVG = $('#'+blockID+'DownloadSVG');
+        var downloadPNG = $('#'+blockID+'DownloadPNG');
         var svg = null
 
         var img = new Image();
@@ -67,8 +69,15 @@
         }
 
 
-        $('#'+blockID+'DownloadPNG').click(function(){
-                console.log('click DownloadPNG.')
+        downloadPNG.click(function(){
+                var imgH=img.height; // original file height
+                var imgW=img.width; // original file width
+                var _canvas = document.createElement('canvas');
+                _canvas.width = imgW;
+                _canvas.height = imgH;
+                var _ctx = _canvas.getContext("2d");
+                _ctx.drawImage(img, 0, 0, imgW, imgH);
+                downloadSVG.attr("href", _canvas.toDataURL('image/png'))
         });
 
         // $('#'+blockID+'LinkToView').click(function(){
