@@ -105,7 +105,7 @@
                 _ctx.drawImage(img, 100, 100);
 
                 // Note: fileName = original .svg filename     dwnLink.download=fileName.substr(0,fileName.lastIndexOf('.'))+'.png';
-                window.open(_canvas.toDataURL('image/png'))
+                window.open(_ctx.canvas.toDataURL('image/png'))
         });
 
 
