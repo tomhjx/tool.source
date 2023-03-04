@@ -94,15 +94,17 @@
 
                 var imgH=img.height; // original file height
                 var imgW=img.width; // original file width
-                var scaleBy = 1;
-                const scale = window.devicePixelRatio*2;
+                // var scaleBy = 1;
+                // const scale = window.devicePixelRatio*2;
 
                 var _canvas = document.createElement('canvas');
-                var cW = _canvas.width = imgW*scaleBy;
-                var cH = _canvas.height = imgH*scaleBy;
+                // var cW = _canvas.width = imgW*scaleBy;
+                // var cH = _canvas.height = imgH*scaleBy;
+                _canvas.width = imgW;
+                _canvas.height = imgH;
                 var _ctx = _canvas.getContext("2d");
-                _ctx.scale(scaleBy,scaleBy);
-                _ctx.drawImage(img, 0, 0, cW, cH);
+                // _ctx.scale(scaleBy,scaleBy);
+                _ctx.drawImage(img, 0, 0, imgW, imgH);
                 // Note: fileName = original .svg filename     dwnLink.download=fileName.substr(0,fileName.lastIndexOf('.'))+'.png';
                 window.open(_canvas.toDataURL('image/png'))
         });
