@@ -75,13 +75,14 @@
                 
                 var scaleBy = 2;
                 var _canvas = document.createElement('canvas');
-                _canvas.width = imgW*scaleBy;
-                _canvas.height = imgH*scaleBy;
-                _canvas.style.width = _canvas.width+"px" ;
-                _canvas.style.hight = _canvas.height+"px";
+                var scale = window.devicePixelRatio*scaleBy;
+                _canvas.width = imgW*scale;
+                _canvas.height = imgH*scale;
+                _canvas.style.width = imgH+"px" ;
+                _canvas.style.hight = imgW+"px";
 
                 var _ctx = _canvas.getContext("2d");
-                _ctx.scale(scaleBy,scaleBy);
+                _ctx.scale(scale,scale);
                 // _ctx.drawImage(img, 0, 0, imgW, imgH);
                 _ctx.drawImage(img, 0, 0);
                 downloadPNG.attr("href", _canvas.toDataURL('image/png'))
