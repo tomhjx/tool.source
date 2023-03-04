@@ -1,7 +1,7 @@
-FROM golang:1.17.5-bullseye as builder
+FROM golang:1.20.1-bullseye as builder
 RUN mkdir $HOME/src && \
     cd $HOME && \
-    git clone --branch v0.92.0 https://github.com/gohugoio/hugo.git && \
+    git clone --branch v0.111.1 https://github.com/gohugoio/hugo.git && \
     cd hugo && \
     go install --tags extended && \
     echo $PATH && \
