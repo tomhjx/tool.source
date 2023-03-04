@@ -77,7 +77,7 @@
                 _canvas.height = imgH;
                 var _ctx = _canvas.getContext("2d");
                 _ctx.drawImage(img, 0, 0, imgW, imgH);
-                downloadSVG.attr("href", _canvas.toDataURL('image/png'))
+                downloadPNG.attr("href", _canvas.toDataURL('image/png'))
         });
 
         // $('#'+blockID+'LinkToView').click(function(){
