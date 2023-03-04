@@ -106,7 +106,9 @@
                 // _ctx.scale(scaleBy,scaleBy);
                 _ctx.drawImage(img, 0, 0, imgW, imgH);
                 // Note: fileName = original .svg filename     dwnLink.download=fileName.substr(0,fileName.lastIndexOf('.'))+'.png';
+                console.log(_canvas.toDataURL('image/png'))
                 window.open(_canvas.toDataURL('image/png'))
+
         });
 
 
