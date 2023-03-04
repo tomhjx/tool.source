@@ -31,7 +31,10 @@
         var svg = null
 
         var img = new Image();
-        img.setAttribute("crossOrigin",'Anonymous')
+        img.crossOrigin="anonymous";
+        img.onload=function(e){
+                console.log($(e).attr('src'))
+        }
         $( "body" ).append(img);
 
         input.onkeyup = function() {
