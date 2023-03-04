@@ -38,8 +38,7 @@
                 });
         }
 
-        function loadImage(url, onload) {
-                var img = new Image(); // alt: document.createElement('img')
+        function loadImage(img, url, onload) {
                 img.onload = onload;
                 img.crossOrigin="anonymous";
                 img.src = url;
@@ -58,10 +57,11 @@
                 var win = window.URL || window.webkitURL || window;
                 var url = win.createObjectURL(blob);
 
-                var _img = loadImage(url, function(){
+                var img = new Image(); // alt: document.createElement('img')
+                loadImage(img, url, function(){
 
-                        var imgH=_img.height; // original file height
-                        var imgW=_img.width; // original file width
+                        var imgH=img.height; // original file height
+                        var imgW=img.width; // original file width
                         var scaleBy = 2;
                         const scale = window.devicePixelRatio*2;
 
@@ -73,7 +73,7 @@
 
                         var _ctx = _canvas.getContext("2d");
                         // _ctx.scale(scaleBy,scaleBy);
-                        // _ctx.drawImage(_img, 0, 0);
+                        _ctx.drawImage(img, 0, 0);
 
                         // Note: fileName = original .svg filename     dwnLink.download=fileName.substr(0,fileName.lastIndexOf('.'))+'.png';
                         window.open(_canvas.toDataURL('image/png'))
