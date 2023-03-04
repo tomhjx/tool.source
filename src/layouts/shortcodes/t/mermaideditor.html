@@ -11,7 +11,8 @@
                 <button type="button" class="btn btn-secondary" id="{{ $blockID  }}LinkToSVG" >Link to SVG</button>
                 <button type="button" class="btn btn-secondary" id="{{ $blockID  }}CopyToIMG" >Copy Image</button>
                 <button type="button" class="btn btn-secondary" id="{{ $blockID  }}DownloadPNG" >Download PNG</button>
-                <button type="button" class="btn btn-secondary" id="{{ $blockID  }}DownloadSVG" >Download SVG</button>
+                <!-- <button type="button" class="btn btn-secondary" id="{{ $blockID  }}DownloadSVG" >Download SVG</button> -->
+                <a class="btn btn-secondary" id="{{ $blockID  }}DownloadSVG" href="javascript:;" download="a.svg"  >Download SVG</a>
           </div>
           <div id="{{ $blockID  }}Output" class="col"></div>
 
@@ -29,6 +30,7 @@
         var input = document.getElementById(blockID);
         var output = document.getElementById(blockID+'Output');
         var linkToView = document.getElementById(blockID+'LinkToView');
+        var downloadSVG = $('#'+blockID+'DownloadSVG');
         var svg = null
 
         var img = new Image();
@@ -38,7 +40,6 @@
                 console.log(img.src)
                 linkToView.href = img.src
         }
-        $( "body" ).append(img);
 
         input.onkeyup = function() {
                 mermaid.mermaidAPI.render('theGraph', input.value, function(svgCode) {
@@ -53,6 +54,10 @@
                         img.src = svgDataUrl
                 });
         }
+
+        downloadSVG.click(function(){
+                downloadSVG.attr("href", img.src)
+        });
 
         function loadImage(img, url, onload) {
                 img.onload = onload;
