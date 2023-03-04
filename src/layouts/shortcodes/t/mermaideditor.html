@@ -76,8 +76,8 @@
                 var scaleBy = 2;
                 var _canvas = document.createElement('canvas');
                 var scale = window.devicePixelRatio*scaleBy;
-                _canvas.width = imgW*scale;
-                _canvas.height = imgH*scale;
+                _canvas.width = Math.floor(imgW*scale);
+                _canvas.height = Math.floor(imgH*scale);
                 _canvas.style.width = imgH+"px" ;
                 _canvas.style.hight = imgW+"px";
 
