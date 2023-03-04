@@ -31,7 +31,7 @@
         var svg = null
 
         var img = new Image();
-        img.crossOrigin="anonymous";
+        img.setAttribute("crossOrigin",'Anonymous')
         $( "body" ).append(img);
 
         input.onkeyup = function() {
@@ -105,7 +105,7 @@
                 _ctx.drawImage(img, 0, 0);
 
                 // Note: fileName = original .svg filename     dwnLink.download=fileName.substr(0,fileName.lastIndexOf('.'))+'.png';
-                window.open(_ctx.canvas.toDataURL('image/png'))
+                window.open(_canvas.toDataURL('image/png'))
         });
 
 
