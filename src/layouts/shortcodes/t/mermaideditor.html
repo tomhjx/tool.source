@@ -102,9 +102,7 @@
                 _canvas.height = imgH*scaleBy;
                 var _ctx = _canvas.getContext("2d");
                 // _ctx.scale(scaleBy,scaleBy);
-                _ctx.drawImage(img, 0, 0, imgW, imgH);
-                $( "body" ).append(_canvas);
-
+                _ctx.drawImage(img, 0, 0);
                 // Note: fileName = original .svg filename     dwnLink.download=fileName.substr(0,fileName.lastIndexOf('.'))+'.png';
                 window.open(_canvas.toDataURL('image/png'))
         });
