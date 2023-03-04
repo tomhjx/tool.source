@@ -41,13 +41,15 @@
                 mermaid.mermaidAPI.render('theGraph', input.value, function(svgCode) {
                         output.innerHTML = svgCode;
                         svg = output.querySelector('svg');
-
                         var svgData = new XMLSerializer().serializeToString(svg);
+                        var svgDataBase64 = btoa(unescape(encodeURIComponent(svgData)))
+                        var svgDataUrl = `data:image/svg+xml;charset=utf-8;base64,${svgDataBase64}`
+
                         var blob = new Blob([svgData], { type: 'image/svg+xml' });
 
-                        var win = window.URL || window.webkitURL || window;
-                        var url = win.createObjectURL(blob);
-                        img.src = url
+                        // var win = window.URL || window.webkitURL || window;
+                        // var url = win.createObjectURL(blob);
+                        img.src = svgDataUrl
                 });
         }
 
