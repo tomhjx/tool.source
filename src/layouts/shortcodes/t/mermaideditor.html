@@ -1,6 +1,6 @@
 {{ $_hugo_config := `{ "version": 1 }` }}
 {{ $blockID := printf "mermaideditorcontainer%d" .Ordinal }}
-{{ $nowDate := now.Format "2006" }}
+{{ $nowDate := now.Format "RFC3339" }}
 
 <div class="container text-left">
         <div class="row">
