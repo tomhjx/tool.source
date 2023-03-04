@@ -1,7 +1,7 @@
 ---
 title: "Markdown Mermaid"
 description: >
-    Rich IntelliSense, Validation for Mermaid.
+    Online editor, Rich IntelliSense, Validation for Markdown Mermaid.
 ---
 
 {{<  t/mermaideditor >}}
