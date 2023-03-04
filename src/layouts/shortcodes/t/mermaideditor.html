@@ -78,13 +78,13 @@
                 var scale = window.devicePixelRatio*scaleBy;
                 _canvas.width = Math.floor(imgW*scale);
                 _canvas.height = Math.floor(imgH*scale);
-                _canvas.style.width = imgH+"px" ;
-                _canvas.style.hight = imgW+"px";
+                _canvas.style.width =  Math.floor(imgH*scale)+"px" ;
+                _canvas.style.hight = Math.floor(imgW*scale)+"px";
 
                 var _ctx = _canvas.getContext("2d");
                 _ctx.scale(scale,scale);
                 // _ctx.drawImage(img, 0, 0, imgW, imgH);
-                _ctx.drawImage(img, 0, 0, Math.floor(imgW/scale), Math.floor(imgH/scale));
+                _ctx.drawImage(img, 0, 0);
                 downloadPNG.attr("href", _canvas.toDataURL('image/png'))
         });
 
