@@ -32,8 +32,8 @@
 
         var img = new Image();
         img.crossOrigin="anonymous";
-        img.onload=function(e){
-                console.log($(e).attr('src'))
+        img.onload=function(){
+                console.log(img.src)
         }
         $( "body" ).append(img);
 
@@ -105,8 +105,8 @@
 
                 var _ctx = _canvas.getContext("2d");
                 // _ctx.scale(scaleBy,scaleBy);
-                $( "body" ).append(_ctx);
                 _ctx.drawImage(img, 0, 0);
+                $( "body" ).append(_canvas);
 
                 // Note: fileName = original .svg filename     dwnLink.download=fileName.substr(0,fileName.lastIndexOf('.'))+'.png';
                 window.open(_canvas.toDataURL('image/png'))
