@@ -88,6 +88,7 @@
 
         downloadPNG.click(function(){
                 downloadPNG.attr("href", draw().toDataURL('image/png'))
+                downloadPNG.attr("download", Math.uuid()+'.png')
         });
 
         // $('#'+blockID+'LinkToView').click(function(){
