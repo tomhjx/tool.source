@@ -88,8 +88,10 @@
                         // var win = window.URL || window.webkitURL || window;
                         // var url = win.createObjectURL(blob);
                         img.src = svgDataUrl
-                        console.log("svg.width="+svg.getBoundingClientRect().width)
-                        console.log("svg.height="+svg.getBoundingClientRect().height)
+                        console.log("svg.getBoundingClientRect.width="+svg.getBoundingClientRect().width)
+                        console.log("svg.getBoundingClientRect.height="+svg.getBoundingClientRect().height)
+                        console.log("svg.getBBox.width="+svg.getBBox().width)
+                        console.log("svg.getBBox.height="+svg.getBBox().height)
                         img.width = svg.getBoundingClientRect().width
 
                 });
