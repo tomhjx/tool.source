@@ -54,8 +54,8 @@
                         canvas = document.createElement('canvas');
                 }
                 
-                var imgH=img.naturalHeight; // original file height
-                var imgW=img.naturalWidth; // original file width
+                var imgH=img.height; // original file height
+                var imgW=img.width; // original file width
                 
                 var scaleBy = 3;
                 var scale = window.devicePixelRatio*scaleBy;
@@ -92,8 +92,8 @@
                         console.log("svg.getBoundingClientRect.height="+svg.getBoundingClientRect().height)
                         console.log("svg.getBBox.width="+svg.getBBox().width)
                         console.log("svg.getBBox.height="+svg.getBBox().height)
-                        img.width = svg.getBoundingClientRect().width
-                        img.height = svg.getBoundingClientRect().height
+                        img.width = svg.getBBox().width
+                        img.height = svg.getBBox().height
 
                 });
         }
