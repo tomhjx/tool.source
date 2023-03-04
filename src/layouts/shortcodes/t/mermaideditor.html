@@ -72,10 +72,13 @@
         downloadPNG.click(function(){
                 var imgH=img.height; // original file height
                 var imgW=img.width; // original file width
+                
+                var scaleBy = 2;
                 var _canvas = document.createElement('canvas');
-                _canvas.width = imgW;
-                _canvas.height = imgH;
+                _canvas.width = imgW*scaleBy;
+                _canvas.height = imgH*scaleBy;
                 var _ctx = _canvas.getContext("2d");
+                _ctx.scale(scaleBy,scaleBy);
                 // _ctx.drawImage(img, 0, 0, imgW, imgH);
                 _ctx.drawImage(img, 0, 0);
                 downloadPNG.attr("href", _canvas.toDataURL('image/png'))
