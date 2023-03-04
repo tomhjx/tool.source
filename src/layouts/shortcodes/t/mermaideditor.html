@@ -6,14 +6,14 @@
         <div class="row">
           <div class="col">
                 <textarea id="{{ $blockID  }}" class="border w-100" style="height: 200px;" ></textarea>
-                <a class="btn btn-secondary" href="###" target="_blank" id="{{ $blockID  }}LinkToView" >Link to view</a>
+                <a class="btn btn-outline-secondary" href="###" target="_blank" id="{{ $blockID  }}LinkToView" >Link to view</a>
                 <button type="button" class="btn btn-secondary" id="{{ $blockID  }}LinkToIMG" >Link to Image</button>
                 <button type="button" class="btn btn-secondary" id="{{ $blockID  }}LinkToSVG" >Link to SVG</button>
                 <button type="button" class="btn btn-secondary" id="{{ $blockID  }}CopyToIMG" >Copy Image</button>
                 <!-- <button type="button" class="btn btn-secondary" id="{{ $blockID  }}DownloadPNG" >Download PNG</button> -->
-                <a class="btn btn-secondary" id="{{ $blockID  }}DownloadPNG" href="javascript:;" download="a.png" >Download PNG</a>
+                <a class="btn btn-outline-secondary" id="{{ $blockID  }}DownloadPNG" href="javascript:;" download="a.png" >Download PNG</a>
                 <!-- <button type="button" class="btn btn-secondary" id="{{ $blockID  }}DownloadSVG" >Download SVG</button> -->
-                <a class="btn btn-secondary" id="{{ $blockID  }}DownloadSVG" href="javascript:;" download="a.svg"  >Download SVG</a>
+                <a class="btn btn-outline-secondary" id="{{ $blockID  }}DownloadSVG" href="javascript:;" download="a.svg"  >Download SVG</a>
           </div>
           <div id="{{ $blockID  }}Output" class="col"></div>
 
@@ -46,30 +46,17 @@
                 console.log("img.naturalHeight="+img.naturalHeight)
                 console.log("img.width="+img.width)
                 console.log("img.height="+img.height)
-
         }
 
         function draw() {
                 if (!canvas) {
-                        canvas = document.createElement('canvas');
-                }
-                
-                var imgH=img.height; // original file height
-                var imgW=img.width; // original file width
-                
-                var scaleBy = 1;
-                var scale = window.devicePixelRatio*scaleBy;
-                console.log('scale:'+scale)
-                canvas.width = Math.floor(imgW*scale);
-                canvas.height = Math.floor(imgH*scale);
-                // _canvas.style.width =  Math.floor(imgH*scale)+"px" ;
-                // _canvas.style.hight = Math.floor(imgW*scale)+"px";
-
-                console.log("canvas.width="+canvas.width+";canvas.height="+canvas.height)
-
+                    canvas = document.createElement('canvas');
+                }       
+                var imgH=img.height;
+                var imgW=img.width;
+                canvas.width = imgW;
+                canvas.height = imgH;
                 var ctx = canvas.getContext("2d");
-                ctx.scale(scale,scale);
-                // ctx.drawImage(img, 0, 0, imgW, imgH);
                 ctx.drawImage(img, 0, 0);
                 return canvas;
         }
