@@ -72,13 +72,11 @@
                         _canvas.style.hight = imgH+"px";
 
                         var _ctx = _canvas.getContext("2d");
-                        // _ctx.scale(scaleBy,scaleBy);
+                        _ctx.scale(scaleBy,scaleBy);
                         _ctx.drawImage(_img, 0, 0);
 
                         // Note: fileName = original .svg filename     dwnLink.download=fileName.substr(0,fileName.lastIndexOf('.'))+'.png';
-                        // window.open(_canvas.toDataURL('image/png'))
-                        console.log(_canvas.toDataURL('image/png'))
-
+                        window.open(_canvas.toDataURL('image/png'))
                 });
 
         });
