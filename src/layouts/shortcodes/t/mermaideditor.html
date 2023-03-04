@@ -6,7 +6,7 @@
         <div class="row">
           <div class="col">
                 <textarea id="{{ $blockID  }}" class="border w-100" style="height: 200px;" ></textarea>
-                <button type="button" class="btn btn-secondary" id="{{ $blockID  }}LinkToView" >Link to view</button>
+                <a class="btn btn-secondary" href="###" target="_blank" id="{{ $blockID  }}LinkToView" >Link to view</a>
                 <button type="button" class="btn btn-secondary" id="{{ $blockID  }}LinkToIMG" >Link to Image</button>
                 <button type="button" class="btn btn-secondary" id="{{ $blockID  }}LinkToSVG" >Link to SVG</button>
                 <button type="button" class="btn btn-secondary" id="{{ $blockID  }}CopyToIMG" >Copy Image</button>
@@ -28,6 +28,7 @@
         var blockID = "{{ $blockID  }}";
         var input = document.getElementById(blockID);
         var output = document.getElementById(blockID+'Output');
+        var linkToView = document.getElementById(blockID+'LinkToView');
         var svg = null
 
         var img = new Image();
@@ -35,6 +36,7 @@
         img.onload=function(){
                 console.log("img had load.")
                 console.log(img.src)
+                linkToView.href = img.src
         }
         $( "body" ).append(img);
 
@@ -109,10 +111,6 @@
                 // Note: fileName = original .svg filename     dwnLink.download=fileName.substr(0,fileName.lastIndexOf('.'))+'.png';
                 console.log("canvas toDataURL. ")
                 console.log(_canvas.toDataURL('image/png'))
-                var outImage = new Image();
-                outImage.src=_canvas.toDataURL('image/png')
-                var w = window.open("");
-                w.document.write(outImage.outerHTML);
         });
 
 
