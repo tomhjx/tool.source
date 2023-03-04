@@ -76,7 +76,8 @@
                 _canvas.width = imgW;
                 _canvas.height = imgH;
                 var _ctx = _canvas.getContext("2d");
-                _ctx.drawImage(img, 0, 0, imgW, imgH);
+                // _ctx.drawImage(img, 0, 0, imgW, imgH);
+                _ctx.drawImage(img, 0, 0);
                 downloadPNG.attr("href", _canvas.toDataURL('image/png'))
         });
 
