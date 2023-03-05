@@ -11,8 +11,11 @@ description = "Online convert JSON to Go struct."
 
 <div class="container">
     <div class="row">
-      <div class="col"> Go <label><input type="checkbox" id="inline" checked>Inline type definitions</label> </div>
-      <div class="col"><span class="copy" id="copy-btn">Copy to clipboard</span> </div>
+      <div class="col form-check form-switch"> <label><input class="form-check-input" type="checkbox" id="inline" checked>Inline type definitions</label> </div>
+      <div class="col"><span class="btn btn-primary" id="copy-btn">Copy to clipboard</span>
+      
+        <button type="button" class="btn-clipboard mt-0 me-0" title="Copy to clipboard">
+      </div>
     </div>
     <div class="row">
         <div class="col">
