@@ -103,6 +103,11 @@ $(function(){
           downloadPNG.attr("href", draw().toDataURL('image/png'))
           downloadPNG.attr("download", self.crypto.randomUUID()+'.png')
   });
+
+  // init
+
+  input.val('graph TB\na-->b');
+  renderMermaid();
 })
 
 </script>
