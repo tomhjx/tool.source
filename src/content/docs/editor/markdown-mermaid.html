@@ -64,7 +64,7 @@ $(function(){
   function renderMermaid() {
           mermaid.mermaidAPI.render('theGraph', input.val(), function(svgCode) {
                   output.html(svgCode);
-                  svg = output.find('svg:eq(0)');
+                  svg = output.find('svg')[0];
                   var svgData = new XMLSerializer().serializeToString(svg);
                   var svgDataBase64 = btoa(unescape(encodeURIComponent(svgData)))
                   svgDataUrl = `data:image/svg+xml;charset=utf-8;base64,${svgDataBase64}`
