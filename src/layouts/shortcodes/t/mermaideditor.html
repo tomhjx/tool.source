@@ -28,13 +28,14 @@
         console.log("{{ $nowDate }}")
 
         var blockID = "{{ $blockID  }}";
-        var input = document.getElementById(blockID);
+        var input = $('#'+blockID);
         var output = document.getElementById(blockID+'Output');
         var linkToView = document.getElementById(blockID+'LinkToView');
         var downloadSVG = $('#'+blockID+'DownloadSVG');
         var downloadPNG = $('#'+blockID+'DownloadPNG');
         var svg = null
         var canvas = null
+        var timeout = null
 
         // define
 
@@ -61,11 +62,8 @@
                 return canvas;
         }
 
-        // bind
-
-
-        input.onkeyup = function() {
-                mermaid.mermaidAPI.render('theGraph', input.value, function(svgCode) {
+        function renderMermaid() {
+                mermaid.mermaidAPI.render('theGraph', input.val(), function(svgCode) {
                         output.innerHTML = svgCode;
                         svg = output.querySelector('svg');
                         var svgData = new XMLSerializer().serializeToString(svg);
@@ -81,6 +79,20 @@
 
                 });
         }
+
+        // bind
+
+        input.keydown(function(){
+                clearTimeout(timeout)
+        })
+
+
+        input.keyup(function(){
+                timeout = setTimeout(renderMermaid, 1000)
+        })
+
+
+
 
         downloadSVG.click(function(){
                 // downloadSVG.attr("href", img.src)
