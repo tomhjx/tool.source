@@ -1,15 +1,14 @@
 +++
 title = "Markdown Mermaid"
+description = "Online Editor, Preview for Markdown Mermaid."
 +++
-<link rel="stylesheet" href="/css/content/docs/formatter/json2go.css">
-
 <div class="container text-left">
   <div class="row">
     <div class="col-2">
           <div class="btn-group" role="group">
-                  <button class="btn btn-outline-primary" id="{{ $blockID  }}LinkToView" >Link to view</button>
-                  <a class="btn btn-outline-primary" id="{{ $blockID  }}DownloadPNG" href="javascript:;" download="a.png" >Download PNG</a>
-                  <a class="btn btn-outline-primary" id="{{ $blockID  }}DownloadSVG" href="javascript:;" download="a.svg"  >Download SVG</a>
+                  <button class="btn btn-outline-primary" id="preview" >Preview</button>
+                  <a class="btn btn-outline-primary" id="downloadPNG" href="javascript:;" download="a.png" >Download PNG</a>
+                  <a class="btn btn-outline-primary" id="downloadSVG" href="javascript:;" download="a.svg"  >Download SVG</a>
           </div>
     </div>
   </div>
@@ -30,7 +29,7 @@ $(function(){
 
   var input = $('#input');
   var output = $('#output');
-  var linkToView = $('#linkToView');
+  var linkToView = $('#preview');
   var downloadSVG = $('#downloadSVG');
   var downloadPNG = $('#dDownloadPNG');
   var svg = null
