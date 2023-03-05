@@ -28,19 +28,19 @@
         var blockID = "{{ $blockID  }}";
         var input = $('#'+blockID);
         var output = document.getElementById(blockID+'Output');
-        var linkToView = document.getElementById(blockID+'LinkToView');
+        var linkToView = $('#'+blockID+'LinkToView');
         var downloadSVG = $('#'+blockID+'DownloadSVG');
         var downloadPNG = $('#'+blockID+'DownloadPNG');
         var svg = null
         var canvas = null
         var timeout = null
+        var svgDataUrl = ''
 
         // define
 
         var img = new Image();
         img.crossOrigin="anonymous";
         img.onload=function(){
-                linkToView.href = img.src
                 console.log("img.naturalWidth="+img.naturalWidth)
                 console.log("img.naturalHeight="+img.naturalHeight)
                 console.log("img.width="+img.width)
@@ -66,7 +66,7 @@
                         svg = output.querySelector('svg');
                         var svgData = new XMLSerializer().serializeToString(svg);
                         var svgDataBase64 = btoa(unescape(encodeURIComponent(svgData)))
-                        var svgDataUrl = `data:image/svg+xml;charset=utf-8;base64,${svgDataBase64}`
+                        svgDataUrl = `data:image/svg+xml;charset=utf-8;base64,${svgDataBase64}`
                         img.src = svgDataUrl
                         // console.log("svg.getBoundingClientRect.width="+svg.getBoundingClientRect().width)
                         // console.log("svg.getBoundingClientRect.height="+svg.getBoundingClientRect().height)
@@ -89,12 +89,14 @@
                 timeout = setTimeout(renderMermaid, 1000)
         })
 
-
+        linkToView.click(function(){
+                var win = window.open();
+                win.document.write('<img src="' + img.src + '"/>');
+        })
 
 
         downloadSVG.click(function(){
-                var win = window.open();
-                win.document.write('<img src="' + img.src + '"/>');
+                downloadPNG.attr("href", svgDataUrl)
         });
 
         downloadPNG.click(function(){
