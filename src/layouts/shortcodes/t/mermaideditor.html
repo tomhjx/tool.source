@@ -4,20 +4,17 @@
 
 <div class="container text-left">
         <div class="row">
-          <div class="col">
-                <textarea id="{{ $blockID  }}" class="border w-100" style="height: 200px;" ></textarea>
-
-                <div class="btn-group" role="group">
-                        <a class="btn btn-outline-primary" href="###" target="_blank" id="{{ $blockID  }}LinkToView" >Link to view</a>
-                        <button type="button" class="btn btn-outline-primary" id="{{ $blockID  }}CopyToIMG" >Copy Image</button>
-                        <!-- <button type="button" class="btn btn-secondary" id="{{ $blockID  }}DownloadPNG" >Download PNG</button> -->
+                <div class="col btn-group" role="group">
+                        <a class="btn btn-outline-primary" href="###" id="{{ $blockID  }}LinkToView" >Link to view</a>
                         <a class="btn btn-outline-primary" id="{{ $blockID  }}DownloadPNG" href="javascript:;" download="a.png" >Download PNG</a>
-                        <!-- <button type="button" class="btn btn-secondary" id="{{ $blockID  }}DownloadSVG" >Download SVG</button> -->
                         <a class="btn btn-outline-primary" id="{{ $blockID  }}DownloadSVG" href="javascript:;" download="a.svg"  >Download SVG</a>
                 </div>
+        </div>
+        <div class="row">
+          <div class="col">
+                <textarea id="{{ $blockID  }}" class="border w-100" style="height: 200px;" ></textarea>
           </div>
           <div id="{{ $blockID  }}Output" class="col"></div>
-
         </div>
 </div>
 
@@ -42,7 +39,7 @@
         var img = new Image();
         img.crossOrigin="anonymous";
         img.onload=function(){
-                linkToView.href = 'https://toolkit.tomhjx.top/docs/editor/mermaid/#'+img.src
+                linkToView.href = img.src
                 console.log("img.naturalWidth="+img.naturalWidth)
                 console.log("img.naturalHeight="+img.naturalHeight)
                 console.log("img.width="+img.width)
@@ -72,14 +69,11 @@
                         var svgData = new XMLSerializer().serializeToString(svg);
                         var svgDataBase64 = btoa(unescape(encodeURIComponent(svgData)))
                         var svgDataUrl = `data:image/svg+xml;charset=utf-8;base64,${svgDataBase64}`
-                        // var blob = new Blob([svgData], { type: 'image/svg+xml' });
-                        // var win = window.URL || window.webkitURL || window;
-                        // var url = win.createObjectURL(blob);
                         img.src = svgDataUrl
-                        console.log("svg.getBoundingClientRect.width="+svg.getBoundingClientRect().width)
-                        console.log("svg.getBoundingClientRect.height="+svg.getBoundingClientRect().height)
-                        console.log("svg.getBBox.width="+svg.getBBox().width)
-                        console.log("svg.getBBox.height="+svg.getBBox().height)
+                        // console.log("svg.getBoundingClientRect.width="+svg.getBoundingClientRect().width)
+                        // console.log("svg.getBoundingClientRect.height="+svg.getBoundingClientRect().height)
+                        // console.log("svg.getBBox.width="+svg.getBBox().width)
+                        // console.log("svg.getBBox.height="+svg.getBBox().height)
                         img.width = svg.getBBox().width
                         img.height = svg.getBBox().height
 
@@ -87,7 +81,8 @@
         }
 
         downloadSVG.click(function(){
-                downloadSVG.attr("href", img.src)
+                // downloadSVG.attr("href", img.src)
+                downloadPNG.attr("href", draw().toDataURL('image/png'))
         });
 
         downloadPNG.click(function(){
