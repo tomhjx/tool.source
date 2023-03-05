@@ -1,12 +1,11 @@
 {{ $_hugo_config := `{ "version": 1 }` }}
 {{ $blockID := printf "mermaideditorcontainer%d" .Ordinal }}
-{{ $nowDate := now.Format "2006-01-02 15:04:05" }}
 
 <div class="container text-left">
         <div class="row">
           <div class="col">
                 <div class="btn-group" role="group">
-                        <a class="btn btn-outline-primary" href="###" id="{{ $blockID  }}LinkToView" >Link to view</a>
+                        <button class="btn btn-outline-primary" id="{{ $blockID  }}LinkToView" >Link to view</button>
                         <a class="btn btn-outline-primary" id="{{ $blockID  }}DownloadPNG" href="javascript:;" download="a.png" >Download PNG</a>
                         <a class="btn btn-outline-primary" id="{{ $blockID  }}DownloadSVG" href="javascript:;" download="a.svg"  >Download SVG</a>
                 </div>
@@ -25,7 +24,6 @@
 <script >
     mermaid.initialize({startOnLoad:false});
     $(function(){
-        console.log("{{ $nowDate }}")
 
         var blockID = "{{ $blockID  }}";
         var input = $('#'+blockID);
@@ -95,8 +93,8 @@
 
 
         downloadSVG.click(function(){
-                // downloadSVG.attr("href", img.src)
-                downloadPNG.attr("href", draw().toDataURL('image/png'))
+                var win = window.open();
+                win.document.write('<img src="' + img.src + '"/>');
         });
 
         downloadPNG.click(function(){
