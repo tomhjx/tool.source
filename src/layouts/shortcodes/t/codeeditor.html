@@ -3,12 +3,12 @@
 {{ $langType := .Get "type" | default "typescript" }}
 
 <div id="{{ $blockID  }}" class="td-box--height-full border w-100" ></div>
-<script src="https://microsoft.github.io/monaco-editor/node_modules/monaco-editor/min/vs/loader.js"></script>
+<script src="/pkg/monaco-editor/min/vs/loader.js"></script>
 <script>
     $(function(){
         var blockID = "{{ $blockID  }}";
         var modeId = '{{ $langType }}';
-        require.config({ paths: { vs: 'https://microsoft.github.io/monaco-editor/node_modules/monaco-editor/min/vs' } });
+        require.config({ paths: { vs: '/pkg/monaco-editor/min/vs/' } });
         require(['vs/editor/editor.main'], function () {
             var editor = monaco.editor.create(document.getElementById(blockID), {
                 language: modeId
