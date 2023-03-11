@@ -8,7 +8,7 @@
       {{ partial "navbar.html" . }}
     </header>
     <div class="container-fluid td-outer">
-          <main class="col ps-md-5" role="main">
+          <main class="td-main col ps-md-5" role="main">
             {{ partial "version-banner.html" . }}
             {{ if not .Site.Params.ui.breadcrumb_disable }}{{ partial "breadcrumb.html" . }}{{ end }}
             {{ block "main" . }}{{ end }}
