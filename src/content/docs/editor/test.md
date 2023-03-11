@@ -1,7 +1,8 @@
 ---
-title: "CSS"
+title: "Test"
 description: >
     Rich IntelliSense, Validation for CSS.
+type: home
 ---
 
 {{< blocks/cover title="About Goldydocs" image_anchor="bottom" height="min" >}}
